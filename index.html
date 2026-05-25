@@ -166,14 +166,17 @@
       color: var(--text-muted); letter-spacing: 0.03em; margin-bottom: 56px;
     }
     .pillars {
-      display: grid; grid-template-columns: repeat(5, 1fr);
+      display: grid; grid-template-columns: repeat(3, 1fr);
       gap: 0; border: 1px solid rgba(184,151,58,0.35); margin-top: 8px;
     }
     .pillar {
       padding: 36px 20px; background: var(--white);
-      border-right: 1px solid rgba(184,151,58,0.2); transition: background 0.2s;
+      border-right: 1px solid rgba(184,151,58,0.2);
+      border-bottom: 1px solid rgba(184,151,58,0.2);
+      transition: background 0.2s;
     }
-    .pillar:last-child { border-right: none; }
+    .pillar:nth-child(3n) { border-right: none; }
+    .pillar:nth-child(n+7) { border-bottom: none; }
     .pillar:hover { background: var(--cream); }
     .pillar-icon { font-size: 1.8rem; margin-bottom: 14px; }
     .pillar-title {
@@ -355,6 +358,26 @@
         <div class="pillar-icon">🔬</div>
         <div class="pillar-title">Microplastics</div>
         <div class="pillar-text">We prioritize products that test for and disclose microplastic contamination in their supply chain.</div>
+      </div>
+      <div class="pillar">
+        <div class="pillar-icon">🧪</div>
+        <div class="pillar-title">Chemicals & Toxins</div>
+        <div class="pillar-text">We evaluate whether products contain harmful additives, bleaching agents, or industrial chemicals.</div>
+      </div>
+      <div class="pillar">
+        <div class="pillar-icon">🍄</div>
+        <div class="pillar-title">Mold</div>
+        <div class="pillar-text">Where relevant, we assess mold risk and whether brands test or disclose mold contamination.</div>
+      </div>
+      <div class="pillar">
+        <div class="pillar-icon">🌱</div>
+        <div class="pillar-title">Yeast</div>
+        <div class="pillar-text">For applicable products, we evaluate yeast contamination risk and any available testing disclosures.</div>
+      </div>
+      <div class="pillar">
+        <div class="pillar-icon">🧬</div>
+        <div class="pillar-title">GMO</div>
+        <div class="pillar-text">We look for non-GMO verification and assess whether genetic modification is a concern for the product type.</div>
       </div>
       <div class="pillar">
         <div class="pillar-icon">✓</div>
