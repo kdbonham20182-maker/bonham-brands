@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Blog – Bonham Brands</title>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400&family=Josefin+Sans:wght@300;400;600&display=swap" rel="stylesheet"/>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --cream: #f5f0e8; --cream-dark: #ede6d6;
+      --gold: #b8973a; --gold-light: #c9a84c; --gold-dark: #8a6e28;
+      --brown: #3b2f1e; --white: #fdfaf4; --text: #2c2215; --text-muted: #6b5a3e;
+    }
+    html { scroll-behavior: smooth; }
+    body { font-family: 'Josefin Sans', sans-serif; background: var(--cream); color: var(--text); overflow-x: hidden; }
+
+    /* NAV */
+    nav { position: fixed; top: 0; left: 0; right: 0; z-index: 1000; background: var(--cream); border-bottom: 1px solid rgba(184,151,58,0.3); display: flex; align-items: center; justify-content: space-between; padding: 0 48px; height: 72px; box-shadow: 0 2px 20px rgba(59,47,30,0.08); }
+    .nav-logo { display: flex; align-items: center; gap: 12px; text-decoration: none; }
+    .nav-logo img { height: 48px; width: 48px; object-fit: contain; }
+    .nav-logo-text { font-family: 'Cormorant Garamond', serif; font-size: 1.2rem; font-weight: 600; letter-spacing: 0.15em; color: var(--brown); text-transform: uppercase; }
+    .nav-links { display: flex; align-items: center; list-style: none; }
+    .nav-links > li { position: relative; }
+    .nav-links > li > a { display: block; padding: 0 16px; height: 72px; line-height: 72px; font-size: 0.72rem; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: var(--brown); text-decoration: none; transition: color 0.2s; white-space: nowrap; }
+    .nav-links > li > a:hover, .nav-links > li > a.active { color: var(--gold); }
+    .has-dropdown:hover .dropdown { display: block; }
+    .dropdown { display: none; position: absolute; top: 72px; left: 0; background: var(--white); border: 1px solid rgba(184,151,58,0.2); border-top: 2px solid var(--gold); min-width: 200px; box-shadow: 0 8px 32px rgba(59,47,30,0.12); }
+    .dropdown a { display: block; padding: 12px 20px; font-size: 0.7rem; font-weight: 400; letter-spacing: 0.1em; text-transform: uppercase; color: var(--brown); text-decoration: none; transition: background 0.15s, color 0.15s; border-bottom: 1px solid rgba(184,151,58,0.1); }
+    .dropdown a:last-child { border-bottom: none; }
+    .dropdown a:hover { background: var(--cream); color: var(--gold); }
+    .nav-x { display: flex; align-items: center; gap: 8px; padding: 8px 18px; border: 1px solid var(--gold); color: var(--gold); text-decoration: none; font-size: 0.68rem; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; transition: background 0.2s, color 0.2s; }
+    .nav-x:hover { background: var(--gold); color: var(--white); }
+
+    /* PAGE HERO */
+    .page-hero { margin-top: 72px; height: 280px; position: relative; display: flex; align-items: center; justify-content: center; background: linear-gradient(to bottom, rgba(20,15,8,0.65) 0%, rgba(20,15,8,0.55) 100%), url('https://images.unsplash.com/photo-1457369804613-52c61a468e7d?w=1600&q=80') center/cover no-repeat; }
+    .page-hero-content { text-align: center; position: relative; z-index: 1; }
+    .page-hero-eyebrow { font-size: 0.68rem; font-weight: 600; letter-spacing: 0.3em; text-transform: uppercase; color: var(--gold-light); margin-bottom: 16px; }
+    .page-hero-title { font-family: 'Cormorant Garamond', serif; font-size: clamp(2.5rem, 5vw, 4rem); font-weight: 300; color: var(--white); letter-spacing: 0.05em; }
+
+    /* BLOG LAYOUT — sidebar + content */
+    .blog-section { padding: 64px 48px 96px; }
+    .blog-inner { max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: 240px 1fr; gap: 48px; align-items: start; }
+
+    /* SIDEBAR */
+    .blog-sidebar { position: sticky; top: 92px; background: var(--white); border: 1px solid rgba(184,151,58,0.2); padding: 28px 20px; }
+    .sidebar-heading { font-size: 0.6rem; font-weight: 600; letter-spacing: 0.25em; text-transform: uppercase; color: var(--gold); margin-bottom: 16px; padding-bottom: 12px; border-bottom: 1px solid rgba(184,151,58,0.15); }
+
+    /* Main category buttons in sidebar */
+    .cat-btn { display: block; width: 100%; text-align: left; padding: 9px 10px; font-size: 0.65rem; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: var(--text-muted); background: none; border: none; border-left: 2px solid transparent; cursor: pointer; transition: color 0.2s, border-color 0.2s, background 0.2s; }
+    .cat-btn:hover { color: var(--gold); background: var(--cream); }
+    .cat-btn.active { color: var(--gold-dark); border-left-color: var(--gold); background: var(--cream); }
+
+    /* Subcategory buttons — hidden until parent clicked */
+    .sub-cats { display: none; padding-left: 10px; }
+    .sub-cats.visible { display: block; }
+    .sub-btn { display: block; width: 100%; text-align: left; padding: 7px 10px; font-size: 0.6rem; font-weight: 400; letter-spacing: 0.08em; text-transform: uppercase; color: var(--text-muted); background: none; border: none; border-left: 2px solid transparent; cursor: pointer; transition: color 0.2s, border-color 0.2s, background 0.2s; }
+    .sub-btn:hover { color: var(--gold); background: var(--cream); }
+    .sub-btn.active { color: var(--gold-dark); border-left-color: var(--gold-light); background: var(--cream); }
+
+    /* Sidebar divider between sections */
+    .sidebar-divider { height: 1px; background: rgba(184,151,58,0.15); margin: 12px 0; }
+
+    /* BLOG CONTENT AREA */
+    .blog-content { min-width: 0; }
+    .results-count { font-size: 0.65rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--text-muted); margin-bottom: 32px; }
+    .blog-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 28px; }
+
+    /* POST CARDS */
+    .blog-card { background: var(--white); text-decoration: none; display: block; transition: transform 0.2s, box-shadow 0.2s; border-bottom: 2px solid transparent; }
+    .blog-card:hover { transform: translateY(-4px); box-shadow: 0 16px 40px rgba(59,47,30,0.1); border-bottom-color: var(--gold); }
+    .blog-card.hidden { display: none; }
+    .blog-card-img { width: 100%; aspect-ratio: 16/9; overflow: hidden; background: var(--cream-dark); display: flex; align-items: center; justify-content: center; }
+    .blog-card-img img { width: 100%; height: 100%; object-fit: cover; }
+    .blog-card-body { padding: 24px 20px; }
+    .blog-tag { font-size: 0.58rem; font-weight: 600; letter-spacing: 0.2em; text-transform: uppercase; color: var(--gold); margin-bottom: 10px; }
+    .blog-card-title { font-family: 'Cormorant Garamond', serif; font-size: 1.2rem; font-weight: 600; color: var(--brown); line-height: 1.3; margin-bottom: 10px; }
+    .blog-card-excerpt { font-size: 0.76rem; font-weight: 300; color: var(--text-muted); line-height: 1.8; margin-bottom: 18px; }
+    .blog-card-meta { font-size: 0.6rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--text-muted); padding-top: 14px; border-top: 1px solid var(--cream-dark); }
+    .no-results { grid-column: 1/-1; text-align: center; padding: 80px 0; color: var(--text-muted); font-size: 0.88rem; }
+
+    /* NEWSLETTER */
+    .newsletter { padding: 96px 48px; background: var(--brown); }
+    .newsletter-inner { max-width: 600px; margin: 0 auto; text-align: center; }
+    .gold-divider { width: 48px; height: 2px; background: var(--gold); margin: 0 auto 24px; }
+    .section-eyebrow { font-size: 0.68rem; font-weight: 600; letter-spacing: 0.3em; text-transform: uppercase; color: var(--gold); margin-bottom: 16px; }
+    .newsletter-title { font-family: 'Cormorant Garamond', serif; font-size: clamp(1.6rem, 2.5vw, 2.2rem); font-weight: 400; color: var(--white); margin-bottom: 16px; }
+    .newsletter-sub { font-size: 0.82rem; font-weight: 300; color: rgba(253,250,244,0.6); margin-bottom: 40px; line-height: 1.8; }
+    .newsletter-form { display: flex; max-width: 480px; margin: 0 auto; }
+    .newsletter-form input { flex: 1; padding: 14px 20px; background: rgba(255,255,255,0.08); border: 1px solid rgba(184,151,58,0.3); border-right: none; color: var(--white); font-family: 'Josefin Sans', sans-serif; font-size: 0.78rem; outline: none; transition: border-color 0.2s; }
+    .newsletter-form input::placeholder { color: rgba(253,250,244,0.4); }
+    .newsletter-form input:focus { border-color: var(--gold); }
+    .newsletter-form button { padding: 14px 28px; background: var(--gold); border: none; color: var(--white); font-family: 'Josefin Sans', sans-serif; font-size: 0.72rem; font-weight: 600; letter-spacing: 0.15em; text-transform: uppercase; cursor: pointer; transition: background 0.2s; }
+    .newsletter-form button:hover { background: var(--gold-dark); }
+    .newsletter-x { margin-top: 28px; font-size: 0.72rem; letter-spacing: 0.15em; text-transform: uppercase; color: rgba(253,250,244,0.5); }
+    .newsletter-x a { color: var(--gold-light); text-decoration: none; border-bottom: 1px solid rgba(184,151,58,0.4); }
+
+    /* FOOTER */
+    footer { background: #1e160d; padding: 60px 48px 32px; }
+    .footer-inner { max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 48px; padding-bottom: 48px; border-bottom: 1px solid rgba(184,151,58,0.15); }
+    .footer-brand img { height: 56px; margin-bottom: 16px; }
+    .footer-tagline { font-family: 'Cormorant Garamond', serif; font-size: 0.95rem; font-style: italic; color: rgba(253,250,244,0.5); line-height: 1.6; }
+    .footer-heading { font-size: 0.62rem; font-weight: 600; letter-spacing: 0.25em; text-transform: uppercase; color: var(--gold); margin-bottom: 20px; }
+    .footer-links { list-style: none; }
+    .footer-links li { margin-bottom: 10px; }
+    .footer-links a { font-size: 0.78rem; font-weight: 300; letter-spacing: 0.08em; color: rgba(253,250,244,0.5); text-decoration: none; transition: color 0.2s; }
+    .footer-links a:hover { color: var(--gold-light); }
+    .footer-bottom { max-width: 1200px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; padding-top: 28px; }
+    .footer-copy { font-size: 0.65rem; letter-spacing: 0.1em; color: rgba(253,250,244,0.3); }
+    .footer-disclosure { font-size: 0.62rem; color: rgba(253,250,244,0.25); max-width: 480px; text-align: right; font-style: italic; line-height: 1.6; }
+  </style>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-9L281L84ZJ"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag("js", new Date());
+    gtag("config", "G-9L281L84ZJ");
+  </script>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <a href="index.html" class="nav-logo">
+    <img src="logo.png" alt="Bonham Brands Logo"/>
+    <span class="nav-logo-text">Bonham Brands</span>
+  </a>
+  <ul class="nav-links">
+    <li><a href="index.html">Home</a></li>
+    <li class="has-dropdown">
+      <a href="shop.html">Shop ▾</a>
+      <div class="dropdown">
+        <a href="shop.html">All Categories</a>
+        <a href="food.html">Food & Grocery</a>
+        <a href="cleaning.html">Cleaning Products</a>
+        <a href="bath.html">Bath & Beauty</a>
+        <a href="home-kitchen.html">Home & Kitchen</a>
+        <a href="outdoors.html">Outdoors & Gear</a>
+      </div>
+    </li>
+    <li><a href="blog.html" class="active">Blog</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="contact.html">Contact</a></li>
+    <li><a href="https://x.com/BonhamBrands" target="_blank" class="nav-x">@BonhamBrands ✕</a></li>
+  </ul>
+</nav>
+
+<!-- PAGE HERO -->
+<section class="page-hero">
+  <div class="page-hero-content">
+    <p class="page-hero-eyebrow">Research · Transparency · Truth</p>
+    <h1 class="page-hero-title">The Blog</h1>
+  </div>
+</section>
+
+<!-- BLOG LAYOUT -->
+<section class="blog-section">
+  <div class="blog-inner">
+
+    <!-- SIDEBAR -->
+    <aside class="blog-sidebar">
+      <p class="sidebar-heading">Browse by Category</p>
+
+      <!-- =====================================================
+           ADD NEW MAIN CATEGORIES HERE
+           Copy a cat-btn and add your category.
+           data-cat must match data-cats on post cards below.
+      ====================================================== -->
+      <button class="cat-btn active" data-cat="all">All Posts</button>
+      <button class="cat-btn" data-cat="bonham-brands">Bonham Brands</button>
+
+      <div class="sidebar-divider"></div>
+
+      <button class="cat-btn" data-cat="food">Food & Grocery</button>
+      <button class="cat-btn" data-cat="cleaning">Cleaning Products</button>
+      <button class="cat-btn" data-cat="bath">Bath & Beauty</button>
+      <button class="cat-btn" data-cat="home-kitchen">Home & Kitchen</button>
+      <button class="cat-btn" data-cat="outdoors">Outdoors & Gear</button>
+
+      <div class="sidebar-divider"></div>
+
+      <!-- Contaminants — subcategories reveal on click -->
+      <button class="cat-btn" data-cat="contaminants">Contaminants</button>
+      <div class="sub-cats" data-parent="contaminants">
+        <!-- =====================================================
+             ADD NEW CONTAMINANT SUBCATEGORIES HERE
+        ====================================================== -->
+        <button class="sub-btn active" data-sub="all">All Contaminants</button>
+        <button class="sub-btn" data-sub="heavy-metals">Heavy Metals</button>
+        <button class="sub-btn" data-sub="chemicals-toxins">Chemicals & Toxins</button>
+        <button class="sub-btn" data-sub="microplastics">Microplastics</button>
+        <button class="sub-btn" data-sub="pesticides">Pesticides</button>
+        <button class="sub-btn" data-sub="gmo">GMO</button>
+        <button class="sub-btn" data-sub="gluten">Gluten</button>
+        <button class="sub-btn" data-sub="mold">Mold</button>
+        <button class="sub-btn" data-sub="yeast">Yeast</button>
+      </div>
+
+      <!-- Food subcategories -->
+      <div class="sub-cats" data-parent="food">
+        <!-- =====================================================
+             ADD NEW FOOD SUBCATEGORIES HERE
+        ====================================================== -->
+        <button class="sub-btn active" data-sub="all">All Food</button>
+        <button class="sub-btn" data-sub="grains">Grains</button>
+        <button class="sub-btn" data-sub="beans">Beans</button>
+        <button class="sub-btn" data-sub="rice">Rice</button>
+        <button class="sub-btn" data-sub="salt">Salt</button>
+        <button class="sub-btn" data-sub="flour">Flour</button>
+        <button class="sub-btn" data-sub="oils">Oils</button>
+        <button class="sub-btn" data-sub="dairy">Dairy</button>
+        <button class="sub-btn" data-sub="oats">Oats</button>
+      </div>
+
+      <div class="sub-cats" data-parent="cleaning">
+        <button class="sub-btn active" data-sub="all">All Cleaning</button>
+        <button class="sub-btn" data-sub="laundry">Laundry</button>
+        <button class="sub-btn" data-sub="dish">Dish</button>
+        <button class="sub-btn" data-sub="surface">Surface</button>
+      </div>
+
+      <div class="sub-cats" data-parent="bath">
+        <button class="sub-btn active" data-sub="all">All Bath & Beauty</button>
+        <button class="sub-btn" data-sub="soap">Soap</button>
+        <button class="sub-btn" data-sub="shampoo">Shampoo</button>
+        <button class="sub-btn" data-sub="skincare">Skincare</button>
+        <button class="sub-btn" data-sub="toothpaste">Toothpaste</button>
+      </div>
+
+      <div class="sub-cats" data-parent="home-kitchen">
+        <button class="sub-btn active" data-sub="all">All Home & Kitchen</button>
+        <button class="sub-btn" data-sub="cookware">Cookware</button>
+        <button class="sub-btn" data-sub="sheets">Sheets</button>
+        <button class="sub-btn" data-sub="pillows">Pillows</button>
+      </div>
+
+      <div class="sub-cats" data-parent="outdoors">
+        <button class="sub-btn active" data-sub="all">All Outdoors</button>
+        <button class="sub-btn" data-sub="tents">Tents</button>
+        <button class="sub-btn" data-sub="sleeping-bags">Sleeping Bags</button>
+        <button class="sub-btn" data-sub="apparel">Apparel</button>
+      </div>
+
+    </aside>
+
+    <!-- BLOG CONTENT -->
+    <div class="blog-content">
+      <p class="results-count" id="resultsCount">Showing all posts</p>
+      <div class="blog-grid" id="blogGrid">
+
+        <!-- =====================================================
+             ADD NEW BLOG POST CARDS HERE
+             data-cats = space-separated main category slugs
+             data-subs = space-separated subcategory slugs
+             data-sort = YYYYMMDD for sorting newest first
+        ====================================================== -->
+
+        <a href="blog-post-intro.html" class="blog-card"
+           data-cats="bonham-brands"
+           data-subs=""
+           data-sort="20260519">
+          <div class="blog-card-img">
+            <img src="https://images.unsplash.com/photo-1493770348161-369560ae357d?w=600&q=80" alt="Who We Are"/>
+          </div>
+          <div class="blog-card-body">
+            <div class="blog-tag">Bonham Brands</div>
+            <div class="blog-card-title">Who We Are and Why We Started Bonham Brands</div>
+            <div class="blog-card-excerpt">We read the labels. We paid the premiums. We trusted the "natural" and "organic" marketing — only to discover many of those products still contained concerning levels of toxins.</div>
+            <div class="blog-card-meta">The Bonham Family &nbsp;·&nbsp; May 19, 2026</div>
+          </div>
+        </a>
+
+        <!-- ADD MORE POSTS ABOVE THIS LINE -->
+
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- NEWSLETTER -->
+<section class="newsletter">
+  <div class="newsletter-inner">
+    <p class="section-eyebrow">Stay Informed</p>
+    <div class="gold-divider"></div>
+    <h2 class="newsletter-title">Subscribe to the Blog</h2>
+    <p class="newsletter-sub">Get our latest research, product discoveries, and contamination findings delivered directly to your inbox.</p>
+    <form class="newsletter-form" onsubmit="return false;">
+      <input type="email" placeholder="Your email address"/>
+      <button type="submit">Subscribe</button>
+    </form>
+    <p class="newsletter-x">Follow us → <a href="https://x.com/BonhamBrands" target="_blank">@BonhamBrands on X</a></p>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <img src="logo.png" alt="Bonham Brands"/>
+      <p class="footer-tagline">"Purity – Highest Quality – Natural"</p>
+    </div>
+    <div>
+      <p class="footer-heading">Explore</p>
+      <ul class="footer-links">
+        <li><a href="food.html">Food & Grocery</a></li>
+        <li><a href="cleaning.html">Cleaning Products</a></li>
+        <li><a href="bath.html">Bath & Beauty</a></li>
+        <li><a href="home-kitchen.html">Home & Kitchen</a></li>
+        <li><a href="outdoors.html">Outdoors & Gear</a></li>
+      </ul>
+    </div>
+    <div>
+      <p class="footer-heading">Company</p>
+      <ul class="footer-links">
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="blog.html">Blog</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="https://x.com/BonhamBrands" target="_blank">@BonhamBrands on X</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p class="footer-copy">© 2026 Bonham Brands LLC. All rights reserved.</p>
+    <p class="footer-disclosure">This site may contain affiliate links. If you purchase through our links, we may earn a commission at no extra cost to you. All product evaluations are our own independent opinion.</p>
+  </div>
+</footer>
+
+<script>
+  // ── CATEGORY FILTERING ──
+  // Reads data-cats and data-subs on each post card.
+  // Shows/hides cards and subcategory lists without page refresh.
+
+  const cards = document.querySelectorAll('.blog-card');
+  const mainBtns = document.querySelectorAll('.cat-btn');
+  const subRows = document.querySelectorAll('.sub-cats');
+  const resultsCount = document.getElementById('resultsCount');
+
+  let activeMain = 'all';
+  let activeSub = 'all';
+
+  function updateGrid() {
+    let visible = 0;
+    cards.forEach(card => {
+      const cats = card.dataset.cats ? card.dataset.cats.split(' ') : [];
+      const subs = card.dataset.subs ? card.dataset.subs.split(' ') : [];
+      const matchMain = activeMain === 'all' || cats.includes(activeMain) || (activeMain === 'contaminants' && subs.some(s => ['heavy-metals','chemicals-toxins','microplastics','pesticides','gmo','gluten','mold','yeast'].includes(s)));
+      const matchSub = activeSub === 'all' || subs.includes(activeSub);
+      if (matchMain && matchSub) { card.classList.remove('hidden'); visible++; }
+      else { card.classList.add('hidden'); }
+    });
+    resultsCount.textContent = `Showing ${visible} post${visible !== 1 ? 's' : ''}`;
+    const noRes = document.getElementById('noResults');
+    if (noRes) noRes.remove();
+    if (visible === 0) {
+      const msg = document.createElement('p');
+      msg.id = 'noResults';
+      msg.className = 'no-results';
+      msg.textContent = 'No posts in this category yet — check back soon.';
+      document.getElementById('blogGrid').appendChild(msg);
+    }
+  }
+
+  mainBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
+      mainBtns.forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      activeMain = btn.dataset.cat;
+      activeSub = 'all';
+      subRows.forEach(row => {
+        row.classList.remove('visible');
+        const firstSub = row.querySelector('.sub-btn');
+        if (firstSub) { row.querySelectorAll('.sub-btn').forEach(sb => sb.classList.remove('active')); firstSub.classList.add('active'); }
+      });
+      if (activeMain !== 'all') {
+        const matchRow = document.querySelector(`.sub-cats[data-parent="${activeMain}"]`);
+        if (matchRow) matchRow.classList.add('visible');
+      }
+      updateGrid();
+    });
+  });
+
+  document.querySelectorAll('.sub-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const row = btn.closest('.sub-cats');
+      row.querySelectorAll('.sub-btn').forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      activeSub = btn.dataset.sub;
+      updateGrid();
+    });
+  });
+
+  updateGrid();
+</script>
+</body>
+</html>

@@ -1,0 +1,574 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Fine Spring Salt – Vera Salt – Bonham Brands</title>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400&family=Josefin+Sans:wght@300;400;600&display=swap" rel="stylesheet"/>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-9L281L84ZJ"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag("js", new Date());
+    gtag("config", "G-9L281L84ZJ");
+  </script>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --cream: #f5f0e8; --cream-dark: #ede6d6;
+      --gold: #b8973a; --gold-light: #c9a84c; --gold-dark: #8a6e28;
+      --brown: #3b2f1e; --white: #fdfaf4; --text: #2c2215; --text-muted: #6b5a3e;
+    }
+    html { scroll-behavior: smooth; }
+    body { font-family: 'Josefin Sans', sans-serif; background: var(--cream); color: var(--text); overflow-x: hidden; }
+
+    /* NAV */
+    nav { position: fixed; top: 0; left: 0; right: 0; z-index: 1000; background: var(--cream); border-bottom: 1px solid rgba(184,151,58,0.3); display: flex; align-items: center; justify-content: space-between; padding: 0 48px; height: 72px; box-shadow: 0 2px 20px rgba(59,47,30,0.08); }
+    .nav-logo { display: flex; align-items: center; gap: 12px; text-decoration: none; }
+    .nav-logo img { height: 48px; width: 48px; object-fit: contain; }
+    .nav-logo-text { font-family: 'Cormorant Garamond', serif; font-size: 1.2rem; font-weight: 600; letter-spacing: 0.15em; color: var(--brown); text-transform: uppercase; }
+    .nav-links { display: flex; align-items: center; list-style: none; }
+    .nav-links > li { position: relative; }
+    .nav-links > li > a { display: block; padding: 0 16px; height: 72px; line-height: 72px; font-size: 0.72rem; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: var(--brown); text-decoration: none; transition: color 0.2s; white-space: nowrap; }
+    .nav-links > li > a:hover, .nav-links > li > a.active { color: var(--gold); }
+    .has-dropdown:hover .dropdown { display: block; }
+    .dropdown { display: none; position: absolute; top: 72px; left: 0; background: var(--white); border: 1px solid rgba(184,151,58,0.2); border-top: 2px solid var(--gold); min-width: 200px; box-shadow: 0 8px 32px rgba(59,47,30,0.12); }
+    .dropdown a { display: block; padding: 12px 20px; font-size: 0.7rem; font-weight: 400; letter-spacing: 0.1em; text-transform: uppercase; color: var(--brown); text-decoration: none; transition: background 0.15s, color 0.15s; border-bottom: 1px solid rgba(184,151,58,0.1); }
+    .dropdown a:last-child { border-bottom: none; }
+    .dropdown a:hover { background: var(--cream); color: var(--gold); }
+    .nav-x { display: flex; align-items: center; gap: 8px; padding: 8px 18px; border: 1px solid var(--gold); color: var(--gold); text-decoration: none; font-size: 0.68rem; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; transition: background 0.2s, color 0.2s; }
+    .nav-x:hover { background: var(--gold); color: var(--white); }
+
+    /* BREADCRUMB */
+    .breadcrumb { margin-top: 72px; padding: 16px 48px; background: var(--white); border-bottom: 1px solid rgba(184,151,58,0.15); }
+    .breadcrumb-inner { max-width: 1200px; margin: 0 auto; display: flex; align-items: center; gap: 8px; }
+    .breadcrumb a { font-size: 0.65rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--text-muted); text-decoration: none; transition: color 0.2s; }
+    .breadcrumb a:hover { color: var(--gold); }
+    .breadcrumb span { font-size: 0.65rem; color: var(--text-muted); }
+    .breadcrumb-current { font-size: 0.65rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--gold-dark); }
+
+    /* PRODUCT HERO */
+    .product-hero { padding: 64px 48px; background: var(--cream); }
+    .product-hero-inner { max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: start; }
+
+    /* IMAGE GALLERY */
+    .gallery { position: sticky; top: 92px; }
+    .gallery-main { width: 100%; aspect-ratio: 1; overflow: hidden; background: var(--white); border: 1px solid rgba(184,151,58,0.2); margin-bottom: 12px; display: flex; align-items: center; justify-content: center; cursor: zoom-in; }
+    .gallery-main img { width: 100%; height: 100%; object-fit: contain; transition: transform 0.3s; }
+    .gallery-main:hover img { transform: scale(1.05); }
+    .gallery-thumbs { display: grid; grid-template-columns: repeat(4, 1fr); gap: 8px; }
+    .thumb { aspect-ratio: 1; overflow: hidden; background: var(--white); border: 1px solid rgba(184,151,58,0.15); cursor: pointer; display: flex; align-items: center; justify-content: center; transition: border-color 0.2s; }
+    .thumb:hover, .thumb.active { border-color: var(--gold); }
+    .thumb img { width: 100%; height: 100%; object-fit: contain; }
+
+    /* PRODUCT INFO */
+    .product-info { min-width: 0; }
+    .product-category-tags { display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 16px; }
+    .cat-tag { font-size: 0.6rem; font-weight: 600; letter-spacing: 0.2em; text-transform: uppercase; color: var(--gold-dark); background: var(--cream-dark); padding: 4px 10px; border: 1px solid rgba(184,151,58,0.25); }
+    .product-name { font-family: 'Cormorant Garamond', serif; font-size: clamp(1.8rem, 3vw, 2.6rem); font-weight: 400; color: var(--brown); line-height: 1.2; margin-bottom: 8px; }
+    .product-brand { font-size: 0.72rem; font-weight: 600; letter-spacing: 0.2em; text-transform: uppercase; color: var(--text-muted); margin-bottom: 32px; }
+    .gold-divider { width: 48px; height: 2px; background: var(--gold); margin-bottom: 32px; }
+
+    /* BUY BUTTON */
+    .btn-buy { display: block; width: 100%; padding: 18px; background: var(--gold); color: var(--white); font-family: 'Josefin Sans', sans-serif; font-size: 0.8rem; font-weight: 600; letter-spacing: 0.25em; text-transform: uppercase; text-decoration: none; text-align: center; transition: background 0.2s, transform 0.2s; margin-bottom: 16px; border: none; cursor: pointer; }
+    .btn-buy:hover { background: var(--gold-dark); transform: translateY(-2px); }
+    .btn-buy-outline { display: block; width: 100%; padding: 16px; background: transparent; color: var(--gold-dark); font-family: 'Josefin Sans', sans-serif; font-size: 0.75rem; font-weight: 600; letter-spacing: 0.2em; text-transform: uppercase; text-decoration: none; text-align: center; border: 1px solid var(--gold); transition: background 0.2s, color 0.2s; margin-bottom: 32px; }
+    .btn-buy-outline:hover { background: var(--gold); color: var(--white); }
+
+    /* QUICK FACTS */
+    .quick-facts { background: var(--white); border: 1px solid rgba(184,151,58,0.2); padding: 24px; margin-bottom: 32px; }
+    .quick-facts-title { font-size: 0.62rem; font-weight: 600; letter-spacing: 0.25em; text-transform: uppercase; color: var(--gold); margin-bottom: 16px; }
+    .fact-list { list-style: none; }
+    .fact-list li { font-size: 0.78rem; font-weight: 300; color: var(--text); line-height: 1.7; padding: 6px 0; border-bottom: 1px solid rgba(184,151,58,0.1); display: flex; align-items: flex-start; gap: 10px; }
+    .fact-list li:last-child { border-bottom: none; }
+    .fact-list li::before { content: '✓'; color: var(--gold); font-size: 0.7rem; margin-top: 2px; flex-shrink: 0; }
+
+    /* EVALUATION SECTION */
+    .evaluation-section { padding: 80px 48px; background: var(--white); border-top: 3px solid var(--gold); }
+    .evaluation-inner { max-width: 860px; margin: 0 auto; }
+    .section-eyebrow { font-size: 0.65rem; font-weight: 600; letter-spacing: 0.3em; text-transform: uppercase; color: var(--gold); margin-bottom: 12px; }
+    .section-title { font-family: 'Cormorant Garamond', serif; font-size: clamp(1.6rem, 2.5vw, 2.2rem); font-weight: 400; color: var(--brown); line-height: 1.25; margin-bottom: 24px; }
+    .eval-body { font-size: 0.88rem; font-weight: 300; line-height: 2; color: var(--text); margin-bottom: 32px; }
+    .eval-body p { margin-bottom: 20px; }
+    .source-block { background: var(--cream); border-left: 3px solid var(--gold); padding: 24px 28px; margin-bottom: 24px; }
+    .source-label { font-size: 0.6rem; font-weight: 600; letter-spacing: 0.25em; text-transform: uppercase; color: var(--gold-dark); margin-bottom: 12px; }
+    .source-list { list-style: none; }
+    .source-list li { font-size: 0.82rem; font-weight: 300; color: var(--text); line-height: 1.8; padding: 5px 0; display: flex; align-items: flex-start; gap: 10px; }
+    .source-list li::before { content: '—'; color: var(--gold); flex-shrink: 0; }
+    .cert-link { display: inline-flex; align-items: center; gap: 6px; font-size: 0.65rem; font-weight: 600; letter-spacing: 0.15em; text-transform: uppercase; color: var(--gold-dark); text-decoration: none; border-bottom: 1px solid rgba(184,151,58,0.4); padding-bottom: 2px; transition: color 0.2s; margin-top: 12px; }
+    .cert-link:hover { color: var(--gold); }
+
+    /* RADAR SECTION */
+    .radar-section { padding: 80px 48px; background: var(--cream-dark); }
+    .radar-inner { max-width: 1000px; margin: 0 auto; }
+    .radar-layout { display: grid; grid-template-columns: 1fr 1fr; gap: 64px; align-items: start; }
+    .radar-container { position: relative; }
+    canvas#radarChart { width: 100% !important; max-width: 400px; display: block; margin: 0 auto; }
+
+    /* PILLAR BREAKDOWN */
+    .pillar-breakdown { }
+    .pillar-item { padding: 16px 0; border-bottom: 1px solid rgba(184,151,58,0.15); }
+    .pillar-item:last-child { border-bottom: none; }
+    .pillar-name { font-size: 0.65rem; font-weight: 600; letter-spacing: 0.2em; text-transform: uppercase; color: var(--gold-dark); margin-bottom: 6px; display: flex; align-items: center; gap: 8px; }
+    .pillar-score { font-size: 0.6rem; font-weight: 600; padding: 2px 8px; background: var(--gold); color: var(--white); }
+    .pillar-score.na { background: var(--cream-dark); color: var(--text-muted); border: 1px solid rgba(184,151,58,0.2); }
+    .pillar-desc { font-size: 0.78rem; font-weight: 300; color: var(--text); line-height: 1.7; }
+
+    /* CONTAMINANT BREAKDOWN */
+    .contaminant-section { padding: 80px 48px; background: var(--brown); }
+    .contaminant-inner { max-width: 860px; margin: 0 auto; }
+    .contaminant-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 2px; background: rgba(184,151,58,0.15); margin-top: 40px; }
+    .contaminant-item { padding: 24px; background: rgba(255,255,255,0.03); }
+    .contaminant-name { font-size: 0.62rem; font-weight: 600; letter-spacing: 0.2em; text-transform: uppercase; color: var(--gold); margin-bottom: 8px; }
+    .contaminant-status { font-size: 0.78rem; font-weight: 300; color: rgba(253,250,244,0.8); line-height: 1.7; }
+
+    /* BUY CTA */
+    .buy-cta { padding: 80px 48px; background: var(--cream); text-align: center; }
+    .buy-cta-inner { max-width: 560px; margin: 0 auto; }
+    .buy-cta-title { font-family: 'Cormorant Garamond', serif; font-size: clamp(1.6rem, 2.5vw, 2.2rem); font-weight: 400; color: var(--brown); margin-bottom: 12px; }
+    .buy-cta-sub { font-size: 0.78rem; font-weight: 300; color: var(--text-muted); margin-bottom: 32px; line-height: 1.8; }
+    .btn-buy-large { display: inline-block; padding: 18px 56px; background: var(--gold); color: var(--white); font-family: 'Josefin Sans', sans-serif; font-size: 0.8rem; font-weight: 600; letter-spacing: 0.25em; text-transform: uppercase; text-decoration: none; transition: background 0.2s, transform 0.2s; }
+    .btn-buy-large:hover { background: var(--gold-dark); transform: translateY(-2px); }
+
+    /* RELATED POSTS */
+    .related-section { padding: 80px 48px; background: var(--cream-dark); }
+    .related-inner { max-width: 1200px; margin: 0 auto; }
+    .related-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 28px; margin-top: 40px; }
+    .blog-card { background: var(--white); text-decoration: none; display: block; transition: transform 0.2s, box-shadow 0.2s; border-bottom: 2px solid transparent; }
+    .blog-card:hover { transform: translateY(-4px); box-shadow: 0 16px 40px rgba(59,47,30,0.1); border-bottom-color: var(--gold); }
+    .blog-card-img { width: 100%; aspect-ratio: 16/9; overflow: hidden; background: var(--cream-dark); display: flex; align-items: center; justify-content: center; }
+    .blog-card-img img { width: 100%; height: 100%; object-fit: cover; }
+    .blog-card-body { padding: 24px 20px; }
+    .blog-tag { font-size: 0.58rem; font-weight: 600; letter-spacing: 0.2em; text-transform: uppercase; color: var(--gold); margin-bottom: 10px; }
+    .blog-card-title { font-family: 'Cormorant Garamond', serif; font-size: 1.15rem; font-weight: 600; color: var(--brown); line-height: 1.3; margin-bottom: 10px; }
+    .blog-card-meta { font-size: 0.6rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--text-muted); padding-top: 14px; border-top: 1px solid var(--cream-dark); }
+
+    /* DISCLOSURE */
+    .disclosure { margin: 40px 0 0; padding: 20px 24px; background: var(--cream-dark); border-left: 3px solid var(--gold); }
+    .disclosure-label { font-size: 0.6rem; font-weight: 600; letter-spacing: 0.2em; text-transform: uppercase; color: var(--gold-dark); margin-bottom: 6px; }
+    .disclosure-text { font-size: 0.72rem; font-weight: 300; color: var(--text-muted); line-height: 1.7; font-style: italic; }
+
+    /* NEWSLETTER */
+    .newsletter { padding: 80px 48px; background: var(--brown); }
+    .newsletter-inner { max-width: 560px; margin: 0 auto; text-align: center; }
+    .newsletter-title { font-family: 'Cormorant Garamond', serif; font-size: clamp(1.5rem, 2.5vw, 2rem); font-weight: 400; color: var(--white); margin-bottom: 16px; }
+    .newsletter-sub { font-size: 0.78rem; font-weight: 300; color: rgba(253,250,244,0.6); margin-bottom: 32px; line-height: 1.8; }
+    .newsletter-form { display: flex; max-width: 440px; margin: 0 auto; }
+    .newsletter-form input { flex: 1; padding: 13px 18px; background: rgba(255,255,255,0.08); border: 1px solid rgba(184,151,58,0.3); border-right: none; color: var(--white); font-family: 'Josefin Sans', sans-serif; font-size: 0.75rem; outline: none; transition: border-color 0.2s; }
+    .newsletter-form input::placeholder { color: rgba(253,250,244,0.4); }
+    .newsletter-form input:focus { border-color: var(--gold); }
+    .newsletter-form button { padding: 13px 24px; background: var(--gold); border: none; color: var(--white); font-family: 'Josefin Sans', sans-serif; font-size: 0.68rem; font-weight: 600; letter-spacing: 0.15em; text-transform: uppercase; cursor: pointer; transition: background 0.2s; }
+    .newsletter-form button:hover { background: var(--gold-dark); }
+
+    /* FOOTER */
+    footer { background: #1e160d; padding: 60px 48px 32px; }
+    .footer-inner { max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 48px; padding-bottom: 48px; border-bottom: 1px solid rgba(184,151,58,0.15); }
+    .footer-brand img { height: 56px; margin-bottom: 16px; }
+    .footer-tagline { font-family: 'Cormorant Garamond', serif; font-size: 0.95rem; font-style: italic; color: rgba(253,250,244,0.5); line-height: 1.6; }
+    .footer-heading { font-size: 0.62rem; font-weight: 600; letter-spacing: 0.25em; text-transform: uppercase; color: var(--gold); margin-bottom: 20px; }
+    .footer-links { list-style: none; }
+    .footer-links li { margin-bottom: 10px; }
+    .footer-links a { font-size: 0.78rem; font-weight: 300; letter-spacing: 0.08em; color: rgba(253,250,244,0.5); text-decoration: none; transition: color 0.2s; }
+    .footer-links a:hover { color: var(--gold-light); }
+    .footer-bottom { max-width: 1200px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; padding-top: 28px; }
+    .footer-copy { font-size: 0.65rem; letter-spacing: 0.1em; color: rgba(253,250,244,0.3); }
+    .footer-disclosure { font-size: 0.62rem; color: rgba(253,250,244,0.25); max-width: 480px; text-align: right; font-style: italic; line-height: 1.6; }
+  </style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <a href="index.html" class="nav-logo">
+    <img src="logo.png" alt="Bonham Brands Logo"/>
+    <span class="nav-logo-text">Bonham Brands</span>
+  </a>
+  <ul class="nav-links">
+    <li><a href="index.html">Home</a></li>
+    <li class="has-dropdown">
+      <a href="shop.html">Shop ▾</a>
+      <div class="dropdown">
+        <a href="shop.html">All Products</a>
+        <a href="shop.html?cat=food">Food & Grocery</a>
+        <a href="shop.html?cat=cleaning">Cleaning Products</a>
+        <a href="shop.html?cat=bath">Bath & Beauty</a>
+        <a href="shop.html?cat=home-kitchen">Home & Kitchen</a>
+        <a href="shop.html?cat=outdoors">Outdoors & Gear</a>
+      </div>
+    </li>
+    <li><a href="blog.html">Blog</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="contact.html">Contact</a></li>
+    <li><a href="https://x.com/BonhamBrands" target="_blank" class="nav-x">@BonhamBrands ✕</a></li>
+  </ul>
+</nav>
+
+<!-- BREADCRUMB -->
+<div class="breadcrumb">
+  <div class="breadcrumb-inner">
+    <a href="shop.html">Shop</a>
+    <span>›</span>
+    <a href="shop.html?cat=food">Food & Grocery</a>
+    <span>›</span>
+    <a href="shop.html?cat=food&sub=salt">Salt</a>
+    <span>›</span>
+    <span class="breadcrumb-current">Fine Spring Salt – Vera Salt</span>
+  </div>
+</div>
+
+<!-- PRODUCT HERO -->
+<section class="product-hero">
+  <div class="product-hero-inner">
+
+    <!-- IMAGE GALLERY -->
+    <div class="gallery">
+      <div class="gallery-main" id="mainImg">
+        <img src="https://bonhambrands.com/wp-content/uploads/2026/04/Fine_Front_-_V2-1.webp" alt="Vera Salt Fine Spring Salt" id="mainImgEl"/>
+      </div>
+      <div class="gallery-thumbs">
+        <div class="thumb active" onclick="setImg(this, 'https://bonhambrands.com/wp-content/uploads/2026/04/Fine_Front_-_V2-1.webp')">
+          <img src="https://bonhambrands.com/wp-content/uploads/2026/04/Fine_Front_-_V2-1.webp" alt="Front"/>
+        </div>
+        <div class="thumb" onclick="setImg(this, 'https://bonhambrands.com/wp-content/uploads/2026/04/Fine_Side_1_-_V2-1.webp')">
+          <img src="https://bonhambrands.com/wp-content/uploads/2026/04/Fine_Side_1_-_V2-1.webp" alt="Side 1"/>
+        </div>
+        <div class="thumb" onclick="setImg(this, 'https://bonhambrands.com/wp-content/uploads/2026/04/Fine_Side_2_-_V2-1.webp')">
+          <img src="https://bonhambrands.com/wp-content/uploads/2026/04/Fine_Side_2_-_V2-1.webp" alt="Side 2"/>
+        </div>
+        <div class="thumb" onclick="setImg(this, 'https://bonhambrands.com/wp-content/uploads/2026/04/Fine_Back_-_V2-1.webp')">
+          <img src="https://bonhambrands.com/wp-content/uploads/2026/04/Fine_Back_-_V2-1.webp" alt="Back"/>
+        </div>
+      </div>
+    </div>
+
+    <!-- PRODUCT INFO -->
+    <div class="product-info">
+      <div class="product-category-tags">
+        <span class="cat-tag">Food & Grocery</span>
+        <span class="cat-tag">Salt</span>
+        <span class="cat-tag">Fine Spring Salt</span>
+      </div>
+      <h1 class="product-name">Fine Spring Salt</h1>
+      <p class="product-brand">By Vera Salt &nbsp;·&nbsp; 300g</p>
+      <div class="gold-divider"></div>
+
+      <a href="https://verasalt.co/products/fine-pure-natural-spring-salt-300g-microplastic-free?variant=45452428673337" target="_blank" class="btn-buy" onclick="gtag('event','affiliate_click',{'product':'vera-salt','location':'product-page-top'})">
+        Click Here to Buy →
+      </a>
+
+      <div class="quick-facts">
+        <p class="quick-facts-title">Health & Certification Facts</p>
+        <ul class="fact-list">
+          <li>Natural and unprocessed — no bleaching, no washing, no additives</li>
+          <li>No anti-caking agents or flow agents</li>
+          <li>Retains naturally occurring minerals (calcium, potassium, magnesium)</li>
+          <li>Every batch independently third-party lab tested for heavy metals and microplastics</li>
+          <li>Non-detect or extremely low levels of aluminum, arsenic, cadmium, lead, and mercury</li>
+          <li>Confirmed microplastic-free by independent accredited lab testing</li>
+          <li>Plastic-free packaging options available</li>
+        </ul>
+      </div>
+
+      <a href="https://verasalt.co/products/fine-pure-natural-spring-salt-300g-microplastic-free?variant=45452428673337" target="_blank" class="btn-buy-outline" onclick="gtag('event','affiliate_click',{'product':'vera-salt','location':'product-page-mid'})">
+        Click Here to Buy →
+      </a>
+
+    </div>
+  </div>
+</section>
+
+<!-- EVALUATION SECTION -->
+<section class="evaluation-section">
+  <div class="evaluation-inner">
+    <p class="section-eyebrow">Our Evaluation</p>
+    <h2 class="section-title">Why We Chose Vera Salt</h2>
+    <div class="eval-body">
+      <p>We selected Vera Salt because it is a natural and unprocessed salt sourced from a protected ancient underground spring in the foothills of Spain, at over 2,000 feet elevation — naturally shielded from ocean pollution and human activity. It is hand-harvested using traditional methods only, with no bleaching, no washing, and no additives of any kind.</p>
+      <p>What sets Vera Salt apart from virtually every other salt on the market is its commitment to batch-level transparency. They test every single batch independently and publish the complete results — including current and historical reports — directly on their website for anyone to review. That level of openness is rare, and it is exactly the standard we look for in a Bonham Gold Label Product.</p>
+    </div>
+
+    <div class="source-block">
+      <p class="source-label">Per Vera Salt</p>
+      <ul class="source-list">
+        <li>Sourced from a protected ancient underground spring in the foothills of Spain at over 2,000 feet elevation, naturally shielded from ocean pollution and human activity</li>
+        <li>Hand-harvested using traditional methods only</li>
+        <li>Natural and unprocessed — no bleaching, no washing, no additives, no anti-caking agents, or flow agents</li>
+        <li>Retains naturally occurring minerals including calcium, potassium, and magnesium</li>
+        <li>Every batch independently third-party lab tested for heavy metals and microplastics</li>
+        <li>Non-detect or extremely low levels of aluminum, arsenic, cadmium, lead, and mercury — among the lowest results for any unrefined salt</li>
+        <li>Confirmed microplastic-free in independent accredited lab testing</li>
+        <li>Plastic-free packaging options available</li>
+      </ul>
+      <a href="https://verasalt.co/pages/lab-testing" target="_blank" class="cert-link">View Full Lab Testing Results & Historical Reports →</a>
+    </div>
+
+    <div class="source-block">
+      <p class="source-label">Per Independent Lab Testing</p>
+      <ul class="source-list">
+        <li>Vera Salt conducts third-party lab testing on every single batch and publishes complete results including the latest 2026 reports and all previous years directly on their website</li>
+        <li>This ongoing, open approach to testing heavy metals and microplastics gives full confidence in the purity of their salt</li>
+        <li>Results consistently show non-detect or extremely low levels across all tested contaminants — among the best published results for any unrefined salt available</li>
+      </ul>
+      <a href="https://verasalt.co/pages/lab-testing" target="_blank" class="cert-link">View Lab Testing Page →</a>
+    </div>
+
+    <div class="disclosure">
+      <p class="disclosure-label">Affiliate Disclosure</p>
+      <p class="disclosure-text">This page contains affiliate links. If you make a purchase through our links, we may earn a commission at no extra cost to you. Vera Salt was selected entirely on merit — we evaluated this product before any affiliate relationship existed.</p>
+    </div>
+  </div>
+</section>
+
+<!-- RADAR SECTION -->
+<section class="radar-section">
+  <div class="radar-inner">
+    <p class="section-eyebrow" style="text-align:center">Bonham Gold Label Evaluation</p>
+    <h2 style="font-family:'Cormorant Garamond',serif; font-size:clamp(1.6rem,2.5vw,2.2rem); font-weight:400; color:var(--brown); text-align:center; margin-bottom:48px;">Purity Profile</h2>
+    <div class="radar-layout">
+
+      <!-- RADAR CHART -->
+      <div class="radar-container">
+        <canvas id="radarChart"></canvas>
+      </div>
+
+      <!-- PILLAR BREAKDOWN -->
+      <div class="pillar-breakdown">
+        <div class="pillar-item">
+          <div class="pillar-name">Heavy Metals <span class="pillar-score">5/5</span></div>
+          <div class="pillar-desc">Every batch is independently third-party lab tested for arsenic, lead, cadmium, mercury, and aluminum. Full historical results are publicly published on Vera Salt's website — a best-in-class standard for transparency.</div>
+        </div>
+        <div class="pillar-item">
+          <div class="pillar-name">Microplastics <span class="pillar-score">5/5</span></div>
+          <div class="pillar-desc">Independently confirmed microplastic-free by accredited third-party lab testing on every batch. Published results are available publicly. This is one of the very few salts on the market to achieve this standard with documented proof.</div>
+        </div>
+        <div class="pillar-item">
+          <div class="pillar-name">Chemicals & Toxins <span class="pillar-score">5/5</span></div>
+          <div class="pillar-desc">Completely unprocessed — no bleaching agents, no anti-caking agents, no flow agents, no washing, and no additives of any kind. What comes out of the spring goes into the package.</div>
+        </div>
+        <div class="pillar-item">
+          <div class="pillar-name">Verified <span class="pillar-score">5/5</span></div>
+          <div class="pillar-desc">Verified through published batch-level third-party lab reports available to the public on Vera Salt's website. This is the highest level of verification a product can demonstrate — not just certified, but documented and open.</div>
+        </div>
+        <div class="pillar-item">
+          <div class="pillar-name">Purity <span class="pillar-score">5/5</span></div>
+          <div class="pillar-desc">Sourced from a single protected ancient underground spring at elevation, naturally shielded from modern contamination. Hand-harvested with no mechanical processing. Retains its natural mineral profile intact.</div>
+        </div>
+        <div class="pillar-item">
+          <div class="pillar-name">Pesticides <span class="pillar-score na">N/A</span></div>
+          <div class="pillar-desc">Not applicable — salt is a mineral, not an agricultural product, and cannot contain pesticide residues. No evaluation needed or possible for this pillar.</div>
+        </div>
+        <div class="pillar-item">
+          <div class="pillar-name">GMO <span class="pillar-score na">N/A</span></div>
+          <div class="pillar-desc">Not applicable — salt is a mineral and cannot be genetically modified. GMO concerns do not apply to this product category.</div>
+        </div>
+        <div class="pillar-item">
+          <div class="pillar-name">Mold <span class="pillar-score na">N/A</span></div>
+          <div class="pillar-desc">Not applicable — salt's naturally antimicrobial properties make mold growth impossible under normal conditions. This is not a concern for this product type.</div>
+        </div>
+        <div class="pillar-item">
+          <div class="pillar-name">Yeast <span class="pillar-score na">N/A</span></div>
+          <div class="pillar-desc">Not applicable — salt does not support yeast growth and this is not a concern for this product category.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTAMINANT BREAKDOWN -->
+<section class="contaminant-section">
+  <div class="contaminant-inner">
+    <p class="section-eyebrow" style="color:var(--gold)">Contaminant Status</p>
+    <h2 style="font-family:'Cormorant Garamond',serif; font-size:clamp(1.6rem,2.5vw,2.2rem); font-weight:400; color:var(--white); margin-bottom:8px;">What We Know About This Product</h2>
+    <p style="font-size:0.82rem; font-weight:300; color:rgba(253,250,244,0.65); line-height:1.8;">A transparent breakdown of every contaminant category and what is known — or not known — about this specific product.</p>
+    <div class="contaminant-grid">
+      <div class="contaminant-item">
+        <div class="contaminant-name">Heavy Metals</div>
+        <div class="contaminant-status">Non-detect or extremely low levels of arsenic, lead, cadmium, mercury, and aluminum confirmed by independent third-party lab testing on every batch. Full published results available publicly.</div>
+      </div>
+      <div class="contaminant-item">
+        <div class="contaminant-name">Microplastics</div>
+        <div class="contaminant-status">Confirmed microplastic-free by independent accredited lab testing. Published batch results available on Vera Salt's website. One of the only salts to achieve this with documented proof.</div>
+      </div>
+      <div class="contaminant-item">
+        <div class="contaminant-name">Chemicals & Toxins</div>
+        <div class="contaminant-status">No bleaching agents, no anti-caking agents, no flow agents, no washing, and no additives of any kind. Completely natural and unprocessed from spring to package.</div>
+      </div>
+      <div class="contaminant-item">
+        <div class="contaminant-name">Pesticides</div>
+        <div class="contaminant-status">Not applicable. Salt is a mineral and cannot contain pesticide residues. No concern for this product type.</div>
+      </div>
+      <div class="contaminant-item">
+        <div class="contaminant-name">GMO</div>
+        <div class="contaminant-status">Not applicable. Salt is a mineral and cannot be genetically modified. No concern for this product type.</div>
+      </div>
+      <div class="contaminant-item">
+        <div class="contaminant-name">Mold</div>
+        <div class="contaminant-status">Not applicable. Salt's antimicrobial properties prevent mold growth under normal storage conditions. No concern for this product type.</div>
+      </div>
+      <div class="contaminant-item">
+        <div class="contaminant-name">Yeast</div>
+        <div class="contaminant-status">Not applicable. Salt does not support yeast growth. No concern for this product type.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- BUY CTA -->
+<section class="buy-cta">
+  <div class="buy-cta-inner">
+    <h2 class="buy-cta-title">Ready to Try Vera Salt?</h2>
+    <p class="buy-cta-sub">The only fine spring salt with published batch-level lab results for heavy metals and microplastics. This is the salt our family uses and trusts.</p>
+    <a href="https://verasalt.co/products/fine-pure-natural-spring-salt-300g-microplastic-free?variant=45452428673337" target="_blank" class="btn-buy-large" onclick="gtag('event','affiliate_click',{'product':'vera-salt','location':'product-page-bottom'})">
+      Click Here to Buy →
+    </a>
+  </div>
+</section>
+
+<!-- RELATED POSTS -->
+<section class="related-section">
+  <div class="related-inner">
+    <p class="section-eyebrow">Continue Reading</p>
+    <h2 style="font-family:'Cormorant Garamond',serif; font-size:clamp(1.6rem,2.5vw,2rem); font-weight:400; color:var(--brown);">Related Blog Posts</h2>
+    <div class="related-grid">
+      <a href="blog-post-intro.html" class="blog-card">
+        <div class="blog-card-img">
+          <img src="https://images.unsplash.com/photo-1493770348161-369560ae357d?w=600&q=80" alt="Blog"/>
+        </div>
+        <div class="blog-card-body">
+          <div class="blog-tag">Bonham Brands</div>
+          <div class="blog-card-title">Who We Are and Why We Started Bonham Brands</div>
+          <div class="blog-card-meta">The Bonham Family · May 19, 2026</div>
+        </div>
+      </a>
+      <a href="blog.html" class="blog-card">
+        <div class="blog-card-img" style="min-height:160px;">
+          <span style="font-family:'Cormorant Garamond',serif; font-size:0.9rem; color:var(--text-muted);">Coming Soon</span>
+        </div>
+        <div class="blog-card-body">
+          <div class="blog-tag">Microplastics</div>
+          <div class="blog-card-title">Microplastics in Your Salt: What We Found</div>
+          <div class="blog-card-meta">The Bonham Family · Coming Soon</div>
+        </div>
+      </a>
+      <a href="blog.html" class="blog-card">
+        <div class="blog-card-img" style="min-height:160px;">
+          <span style="font-family:'Cormorant Garamond',serif; font-size:0.9rem; color:var(--text-muted);">Coming Soon</span>
+        </div>
+        <div class="blog-card-body">
+          <div class="blog-tag">Heavy Metals</div>
+          <div class="blog-card-title">Why "Organic" Doesn't Mean Metal-Free</div>
+          <div class="blog-card-meta">The Bonham Family · Coming Soon</div>
+        </div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- NEWSLETTER -->
+<section class="newsletter">
+  <div class="newsletter-inner">
+    <p style="font-size:0.65rem; font-weight:600; letter-spacing:0.3em; text-transform:uppercase; color:var(--gold); margin-bottom:12px;">Stay Informed</p>
+    <h2 class="newsletter-title">Join the Community</h2>
+    <p class="newsletter-sub">Get our latest product discoveries and research delivered directly to your inbox.</p>
+    <form class="newsletter-form" onsubmit="return false;">
+      <input type="email" placeholder="Your email address"/>
+      <button type="submit">Subscribe</button>
+    </form>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <img src="logo.png" alt="Bonham Brands"/>
+      <p class="footer-tagline">"Purity – Highest Quality – Natural"</p>
+    </div>
+    <div>
+      <p class="footer-heading">Explore</p>
+      <ul class="footer-links">
+        <li><a href="shop.html">All Products</a></li>
+        <li><a href="shop.html?cat=food">Food & Grocery</a></li>
+        <li><a href="shop.html?cat=cleaning">Cleaning Products</a></li>
+        <li><a href="shop.html?cat=bath">Bath & Beauty</a></li>
+        <li><a href="shop.html?cat=outdoors">Outdoors & Gear</a></li>
+      </ul>
+    </div>
+    <div>
+      <p class="footer-heading">Company</p>
+      <ul class="footer-links">
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="blog.html">Blog</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="https://x.com/BonhamBrands" target="_blank">@BonhamBrands on X</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p class="footer-copy">© 2026 Bonham Brands LLC. All rights reserved.</p>
+    <p class="footer-disclosure">This site may contain affiliate links. If you purchase through our links, we may earn a commission at no extra cost to you. All product evaluations are our own independent opinion.</p>
+  </div>
+</footer>
+
+<!-- CHART.JS FOR RADAR -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js"></script>
+<script>
+  // Gallery switcher — clicking a thumbnail updates the main image
+  function setImg(thumb, src) {
+    document.getElementById('mainImgEl').src = src;
+    document.querySelectorAll('.thumb').forEach(t => t.classList.remove('active'));
+    thumb.classList.add('active');
+  }
+
+  // Radar chart — only applicable pillars shown
+  // Scores: 0=unknown, 1=poor, 2=fair, 3=good, 4=strong, 5=exceptional
+  const ctx = document.getElementById('radarChart').getContext('2d');
+  new Chart(ctx, {
+    type: 'radar',
+    data: {
+      labels: ['Heavy Metals', 'Microplastics', 'Chemicals\n& Toxins', 'Verified', 'Purity'],
+      datasets: [{
+        label: 'Vera Salt',
+        data: [5, 5, 5, 5, 5],
+        backgroundColor: 'rgba(184,151,58,0.15)',
+        borderColor: '#b8973a',
+        borderWidth: 2,
+        pointBackgroundColor: '#b8973a',
+        pointBorderColor: '#fff',
+        pointHoverBackgroundColor: '#fff',
+        pointHoverBorderColor: '#b8973a',
+        pointRadius: 5,
+      }]
+    },
+    options: {
+      responsive: true,
+      scales: {
+        r: {
+          min: 0,
+          max: 5,
+          ticks: {
+            stepSize: 1,
+            display: false,
+          },
+          grid: { color: 'rgba(184,151,58,0.2)' },
+          angleLines: { color: 'rgba(184,151,58,0.2)' },
+          pointLabels: {
+            font: { family: 'Josefin Sans', size: 11, weight: '600' },
+            color: '#6b5a3e',
+          }
+        }
+      },
+      plugins: {
+        legend: { display: false },
+        tooltip: {
+          callbacks: {
+            label: ctx => `Score: ${ctx.raw}/5`
+          }
+        }
+      }
+    }
+  });
+</script>
+</body>
+</html>
