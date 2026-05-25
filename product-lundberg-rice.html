@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Fine Spring Salt – Vera Salt – Bonham Brands</title>
+  <title>Organic Long Grain White Rice – Lundberg Family Farms – Bonham Brands</title>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400&family=Josefin+Sans:wght@300;400;600&display=swap" rel="stylesheet"/>
   <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-9L281L84ZJ"></script>
@@ -22,8 +22,6 @@
     }
     html { scroll-behavior: smooth; }
     body { font-family: 'Josefin Sans', sans-serif; background: var(--cream); color: var(--text); overflow-x: hidden; }
-
-    /* NAV */
     nav { position: fixed; top: 0; left: 0; right: 0; z-index: 1000; background: var(--cream); border-bottom: 1px solid rgba(184,151,58,0.3); display: flex; align-items: center; justify-content: space-between; padding: 0 48px; height: 72px; box-shadow: 0 2px 20px rgba(59,47,30,0.08); }
     .nav-logo { display: flex; align-items: center; gap: 12px; text-decoration: none; }
     .nav-logo img { height: 48px; width: 48px; object-fit: contain; }
@@ -39,52 +37,38 @@
     .dropdown a:hover { background: var(--cream); color: var(--gold); }
     .nav-x { display: flex; align-items: center; gap: 8px; padding: 8px 18px; border: 1px solid var(--gold); color: var(--gold); text-decoration: none; font-size: 0.98rem; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; transition: background 0.2s, color 0.2s; }
     .nav-x:hover { background: var(--gold); color: var(--white); }
-
-    /* BREADCRUMB */
     .breadcrumb { margin-top: 72px; padding: 16px 48px; background: var(--white); border-bottom: 1px solid rgba(184,151,58,0.15); }
     .breadcrumb-inner { max-width: 1200px; margin: 0 auto; display: flex; align-items: center; gap: 8px; }
     .breadcrumb a { font-size: 0.95rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--text-muted); text-decoration: none; transition: color 0.2s; }
     .breadcrumb a:hover { color: var(--gold); }
     .breadcrumb span { font-size: 0.95rem; color: var(--text-muted); }
     .breadcrumb-current { font-size: 0.95rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--gold-dark); }
-
-    /* PRODUCT HERO */
     .product-hero { padding: 64px 48px; background: var(--cream); }
     .product-hero-inner { max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: start; }
-
-    /* IMAGE GALLERY */
     .gallery { position: sticky; top: 92px; }
-    .gallery-main { width: 100%; aspect-ratio: 1; overflow: hidden; background: var(--white); border: 1px solid rgba(184,151,58,0.2); margin-bottom: 12px; display: flex; align-items: center; justify-content: center; cursor: zoom-in; }
+    .gallery-main { width: 100%; aspect-ratio: 1; overflow: hidden; background: var(--white); border: 1px solid rgba(184,151,58,0.2); margin-bottom: 12px; display: flex; align-items: center; justify-content: center; }
     .gallery-main img { width: 100%; height: 100%; object-fit: contain; transition: transform 0.3s; }
     .gallery-main:hover img { transform: scale(1.05); }
     .gallery-thumbs { display: grid; grid-template-columns: repeat(4, 1fr); gap: 8px; }
     .thumb { aspect-ratio: 1; overflow: hidden; background: var(--white); border: 1px solid rgba(184,151,58,0.15); cursor: pointer; display: flex; align-items: center; justify-content: center; transition: border-color 0.2s; }
     .thumb:hover, .thumb.active { border-color: var(--gold); }
     .thumb img { width: 100%; height: 100%; object-fit: contain; }
-
-    /* PRODUCT INFO */
     .product-info { min-width: 0; }
     .product-category-tags { display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 16px; }
     .cat-tag { font-size: 0.9rem; font-weight: 600; letter-spacing: 0.2em; text-transform: uppercase; color: var(--gold-dark); background: var(--cream-dark); padding: 4px 10px; border: 1px solid rgba(184,151,58,0.25); }
     .product-name { font-family: 'Cormorant Garamond', serif; font-size: clamp(1.8rem, 3vw, 2.6rem); font-weight: 400; color: var(--brown); line-height: 1.2; margin-bottom: 8px; }
     .product-brand { font-size: 1.02rem; font-weight: 600; letter-spacing: 0.2em; text-transform: uppercase; color: var(--text-muted); margin-bottom: 32px; }
     .gold-divider { width: 48px; height: 2px; background: var(--gold); margin-bottom: 32px; }
-
-    /* BUY BUTTON */
-    .btn-buy { display: block; width: 100%; padding: 18px; background: var(--gold); color: var(--white); font-family: 'Josefin Sans', sans-serif; font-size: 1.1rem; font-weight: 600; letter-spacing: 0.25em; text-transform: uppercase; text-decoration: none; text-align: center; transition: background 0.2s, transform 0.2s; margin-bottom: 16px; border: none; cursor: pointer; }
+    .btn-buy { display: block; width: 100%; padding: 18px; background: var(--gold); color: var(--white); font-family: 'Josefin Sans', sans-serif; font-size: 1.1rem; font-weight: 600; letter-spacing: 0.25em; text-transform: uppercase; text-decoration: none; text-align: center; transition: background 0.2s, transform 0.2s; margin-bottom: 16px; }
     .btn-buy:hover { background: var(--gold-dark); transform: translateY(-2px); }
     .btn-buy-outline { display: block; width: 100%; padding: 16px; background: transparent; color: var(--gold-dark); font-family: 'Josefin Sans', sans-serif; font-size: 1.05rem; font-weight: 600; letter-spacing: 0.2em; text-transform: uppercase; text-decoration: none; text-align: center; border: 1px solid var(--gold); transition: background 0.2s, color 0.2s; margin-bottom: 32px; }
     .btn-buy-outline:hover { background: var(--gold); color: var(--white); }
-
-    /* QUICK FACTS */
     .quick-facts { background: var(--white); border: 1px solid rgba(184,151,58,0.2); padding: 24px; margin-bottom: 32px; }
     .quick-facts-title { font-size: 0.92rem; font-weight: 600; letter-spacing: 0.25em; text-transform: uppercase; color: var(--gold); margin-bottom: 16px; }
     .fact-list { list-style: none; }
     .fact-list li { font-size: 1.08rem; font-weight: 300; color: var(--text); line-height: 1.7; padding: 6px 0; border-bottom: 1px solid rgba(184,151,58,0.1); display: flex; align-items: flex-start; gap: 10px; }
     .fact-list li:last-child { border-bottom: none; }
     .fact-list li::before { content: '✓'; color: var(--gold); font-size: 1.0rem; margin-top: 2px; flex-shrink: 0; }
-
-    /* EVALUATION SECTION */
     .evaluation-section { padding: 80px 48px; background: var(--white); border-top: 3px solid var(--gold); }
     .evaluation-inner { max-width: 860px; margin: 0 auto; }
     .section-eyebrow { font-size: 0.95rem; font-weight: 600; letter-spacing: 0.3em; text-transform: uppercase; color: var(--gold); margin-bottom: 12px; }
@@ -96,42 +80,35 @@
     .source-list { list-style: none; }
     .source-list li { font-size: 1.12rem; font-weight: 300; color: var(--text); line-height: 1.8; padding: 5px 0; display: flex; align-items: flex-start; gap: 10px; }
     .source-list li::before { content: '—'; color: var(--gold); flex-shrink: 0; }
-    .cert-link { display: inline-flex; align-items: center; gap: 6px; font-size: 0.95rem; font-weight: 600; letter-spacing: 0.15em; text-transform: uppercase; color: var(--gold-dark); text-decoration: none; border-bottom: 1px solid rgba(184,151,58,0.4); padding-bottom: 2px; transition: color 0.2s; margin-top: 12px; }
+    .cert-link { display: inline-flex; align-items: center; gap: 6px; font-size: 0.95rem; font-weight: 600; letter-spacing: 0.15em; text-transform: uppercase; color: var(--gold-dark); text-decoration: none; border-bottom: 1px solid rgba(184,151,58,0.4); padding-bottom: 2px; transition: color 0.2s; margin-top: 12px; margin-right: 16px; }
     .cert-link:hover { color: var(--gold); }
-
-    /* RADAR SECTION */
+    .disclosure { margin: 40px 0 0; padding: 20px 24px; background: var(--cream-dark); border-left: 3px solid var(--gold); }
+    .disclosure-label { font-size: 0.9rem; font-weight: 600; letter-spacing: 0.2em; text-transform: uppercase; color: var(--gold-dark); margin-bottom: 6px; }
+    .disclosure-text { font-size: 1.02rem; font-weight: 300; color: var(--text-muted); line-height: 1.7; font-style: italic; }
     .radar-section { padding: 80px 48px; background: var(--cream-dark); }
     .radar-inner { max-width: 1000px; margin: 0 auto; }
     .radar-layout { display: grid; grid-template-columns: 1fr 1fr; gap: 64px; align-items: start; }
-    .radar-container { position: relative; }
-    canvas#radarChart { width: 100% !important; max-width: 400px; display: block; margin: 0 auto; }
-
-    /* PILLAR BREAKDOWN */
     .pillar-breakdown { }
     .pillar-item { padding: 16px 0; border-bottom: 1px solid rgba(184,151,58,0.15); }
     .pillar-item:last-child { border-bottom: none; }
     .pillar-name { font-size: 0.95rem; font-weight: 600; letter-spacing: 0.2em; text-transform: uppercase; color: var(--gold-dark); margin-bottom: 6px; display: flex; align-items: center; gap: 8px; }
     .pillar-score { font-size: 0.9rem; font-weight: 600; padding: 2px 8px; background: var(--gold); color: var(--white); }
     .pillar-score.na { background: var(--cream-dark); color: var(--text-muted); border: 1px solid rgba(184,151,58,0.2); }
+    .pillar-score.low { background: #8a6e28; }
+    .pillar-score.mid { background: #a07c2a; }
     .pillar-desc { font-size: 1.08rem; font-weight: 300; color: var(--text); line-height: 1.7; }
-
-    /* CONTAMINANT BREAKDOWN */
     .contaminant-section { padding: 80px 48px; background: var(--brown); }
     .contaminant-inner { max-width: 860px; margin: 0 auto; }
     .contaminant-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 2px; background: rgba(184,151,58,0.15); margin-top: 40px; }
     .contaminant-item { padding: 24px; background: rgba(255,255,255,0.03); }
     .contaminant-name { font-size: 0.92rem; font-weight: 600; letter-spacing: 0.2em; text-transform: uppercase; color: var(--gold); margin-bottom: 8px; }
     .contaminant-status { font-size: 1.08rem; font-weight: 300; color: rgba(253,250,244,0.8); line-height: 1.7; }
-
-    /* BUY CTA */
     .buy-cta { padding: 80px 48px; background: var(--cream); text-align: center; }
     .buy-cta-inner { max-width: 560px; margin: 0 auto; }
     .buy-cta-title { font-family: 'Cormorant Garamond', serif; font-size: clamp(1.6rem, 2.5vw, 2.2rem); font-weight: 400; color: var(--brown); margin-bottom: 12px; }
     .buy-cta-sub { font-size: 1.08rem; font-weight: 300; color: var(--text-muted); margin-bottom: 32px; line-height: 1.8; }
     .btn-buy-large { display: inline-block; padding: 18px 56px; background: var(--gold); color: var(--white); font-family: 'Josefin Sans', sans-serif; font-size: 1.1rem; font-weight: 600; letter-spacing: 0.25em; text-transform: uppercase; text-decoration: none; transition: background 0.2s, transform 0.2s; }
     .btn-buy-large:hover { background: var(--gold-dark); transform: translateY(-2px); }
-
-    /* RELATED POSTS */
     .related-section { padding: 80px 48px; background: var(--cream-dark); }
     .related-inner { max-width: 1200px; margin: 0 auto; }
     .related-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 28px; margin-top: 40px; }
@@ -143,25 +120,15 @@
     .blog-tag { font-size: 0.88rem; font-weight: 600; letter-spacing: 0.2em; text-transform: uppercase; color: var(--gold); margin-bottom: 10px; }
     .blog-card-title { font-family: 'Cormorant Garamond', serif; font-size: 1.45rem; font-weight: 600; color: var(--brown); line-height: 1.3; margin-bottom: 10px; }
     .blog-card-meta { font-size: 0.9rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--text-muted); padding-top: 14px; border-top: 1px solid var(--cream-dark); }
-
-    /* DISCLOSURE */
-    .disclosure { margin: 40px 0 0; padding: 20px 24px; background: var(--cream-dark); border-left: 3px solid var(--gold); }
-    .disclosure-label { font-size: 0.9rem; font-weight: 600; letter-spacing: 0.2em; text-transform: uppercase; color: var(--gold-dark); margin-bottom: 6px; }
-    .disclosure-text { font-size: 1.02rem; font-weight: 300; color: var(--text-muted); line-height: 1.7; font-style: italic; }
-
-    /* NEWSLETTER */
     .newsletter { padding: 80px 48px; background: var(--brown); }
     .newsletter-inner { max-width: 560px; margin: 0 auto; text-align: center; }
     .newsletter-title { font-family: 'Cormorant Garamond', serif; font-size: clamp(1.5rem, 2.5vw, 2rem); font-weight: 400; color: var(--white); margin-bottom: 16px; }
     .newsletter-sub { font-size: 1.08rem; font-weight: 300; color: rgba(253,250,244,0.6); margin-bottom: 32px; line-height: 1.8; }
     .newsletter-form { display: flex; max-width: 440px; margin: 0 auto; }
-    .newsletter-form input { flex: 1; padding: 13px 18px; background: rgba(255,255,255,0.08); border: 1px solid rgba(184,151,58,0.3); border-right: none; color: var(--white); font-family: 'Josefin Sans', sans-serif; font-size: 1.05rem; outline: none; transition: border-color 0.2s; }
+    .newsletter-form input { flex: 1; padding: 13px 18px; background: rgba(255,255,255,0.08); border: 1px solid rgba(184,151,58,0.3); border-right: none; color: var(--white); font-family: 'Josefin Sans', sans-serif; font-size: 1.05rem; outline: none; }
     .newsletter-form input::placeholder { color: rgba(253,250,244,0.4); }
-    .newsletter-form input:focus { border-color: var(--gold); }
     .newsletter-form button { padding: 13px 24px; background: var(--gold); border: none; color: var(--white); font-family: 'Josefin Sans', sans-serif; font-size: 0.98rem; font-weight: 600; letter-spacing: 0.15em; text-transform: uppercase; cursor: pointer; transition: background 0.2s; }
     .newsletter-form button:hover { background: var(--gold-dark); }
-
-    /* FOOTER */
     footer { background: #1e160d; padding: 60px 48px 32px; }
     .footer-inner { max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 48px; padding-bottom: 48px; border-bottom: 1px solid rgba(184,151,58,0.15); }
     .footer-brand img { height: 56px; margin-bottom: 16px; }
@@ -177,8 +144,6 @@
   </style>
 </head>
 <body>
-
-<!-- NAV -->
 <nav>
   <a href="index.html" class="nav-logo">
     <img src="logo.png" alt="Bonham Brands Logo"/>
@@ -204,178 +169,147 @@
   </ul>
 </nav>
 
-<!-- BREADCRUMB -->
 <div class="breadcrumb">
   <div class="breadcrumb-inner">
-    <a href="shop.html">Shop</a>
-    <span>›</span>
-    <a href="shop.html?cat=food">Food & Grocery</a>
-    <span>›</span>
-    <a href="shop.html?cat=food&sub=salt">Salt</a>
-    <span>›</span>
-    <span class="breadcrumb-current">Fine Spring Salt – Vera Salt</span>
+    <a href="shop.html">Shop</a><span>›</span>
+    <a href="shop.html?cat=food">Food & Grocery</a><span>›</span>
+    <a href="shop.html?cat=food&sub=rice">Rice</a><span>›</span>
+    <span class="breadcrumb-current">Organic Long Grain White Rice – Lundberg</span>
   </div>
 </div>
 
-<!-- PRODUCT HERO -->
 <section class="product-hero">
   <div class="product-hero-inner">
-
-    <!-- IMAGE GALLERY -->
     <div class="gallery">
-      <div class="gallery-main" id="mainImg">
-        <img src="images/vera-salt/Fine_Front_-_V2.webp" alt="Vera Salt Fine Spring Salt" id="mainImgEl"/>
+      <div class="gallery-main">
+        <img src="images/lundberg-rice/main.webp" alt="Lundberg Organic Long Grain White Rice" id="mainImgEl"/>
       </div>
       <div class="gallery-thumbs">
-        <div class="thumb active" onclick="setImg(this, 'images/vera-salt/Fine_Front_-_V2.webp')">
-          <img src="images/vera-salt/Fine_Front_-_V2.webp" alt="Front"/>
-        </div>
-        <div class="thumb" onclick="setImg(this, 'images/vera-salt/Fine_Side_1_-_V2.webp')">
-          <img src="images/vera-salt/Fine_Side_1_-_V2.webp" alt="Side 1"/>
-        </div>
-        <div class="thumb" onclick="setImg(this, 'images/vera-salt/Fine_Side_2_-_V2.webp')">
-          <img src="images/vera-salt/Fine_Side_2_-_V2.webp" alt="Side 2"/>
-        </div>
-        <div class="thumb" onclick="setImg(this, 'images/vera-salt/Fine_Back_-_V2.webp')">
-          <img src="images/vera-salt/Fine_Back_-_V2.webp" alt="Back"/>
-        </div>
+        <div class="thumb active" onclick="setImg(this,'images/lundberg-rice/main.webp')"><img src="images/lundberg-rice/main.webp" alt="Main"/></div>
+        <div class="thumb" onclick="setImg(this,'images/lundberg-rice/2.webp')"><img src="images/lundberg-rice/2.webp" alt="2"/></div>
+        <div class="thumb" onclick="setImg(this,'images/lundberg-rice/3.webp')"><img src="images/lundberg-rice/3.webp" alt="3"/></div>
+        <div class="thumb" onclick="setImg(this,'images/lundberg-rice/4.webp')"><img src="images/lundberg-rice/4.webp" alt="4"/></div>
       </div>
     </div>
-
-    <!-- PRODUCT INFO -->
     <div class="product-info">
       <div class="product-category-tags">
         <span class="cat-tag">Food & Grocery</span>
-        <span class="cat-tag">Salt</span>
-        <span class="cat-tag">Fine Spring Salt</span>
+        <span class="cat-tag">Rice</span>
+        <span class="cat-tag">Long Grain White Rice</span>
       </div>
-      <h1 class="product-name">Fine Spring Salt</h1>
-      <p class="product-brand">By Vera Salt &nbsp;·&nbsp; 300g</p>
+      <h1 class="product-name">Organic Long Grain White Rice</h1>
+      <p class="product-brand">By Lundberg Family Farms &nbsp;·&nbsp; 2 lb.</p>
       <div class="gold-divider"></div>
-
-      <a href="https://verasalt.co/products/fine-pure-natural-spring-salt-300g-microplastic-free?variant=45452428673337" target="_blank" class="btn-buy" onclick="gtag('event','affiliate_click',{'product':'vera-salt','location':'product-page-top'})">
-        Click Here to Buy →
-      </a>
-
+      <a href="https://www.lundberg.com/collections/rice-quinoa/products/organic-long-grain-white-rice-2lb" target="_blank" class="btn-buy" onclick="gtag('event','affiliate_click',{'product':'lundberg-rice','location':'product-page-top'})">Click Here to Buy →</a>
       <div class="quick-facts">
         <p class="quick-facts-title">Health & Certification Facts</p>
         <ul class="fact-list">
-          <li>Natural and unprocessed — no bleaching, no washing, no additives</li>
-          <li>No anti-caking agents or flow agents</li>
-          <li>Retains naturally occurring minerals (calcium, potassium, magnesium)</li>
-          <li>Every batch independently third-party lab tested for heavy metals and microplastics</li>
-          <li>Non-detect or extremely low levels of aluminum, arsenic, cadmium, lead, and mercury</li>
-          <li>Confirmed microplastic-free by independent accredited lab testing</li>
-          <li>Plastic-free packaging options available</li>
+          <li>Regenerative Organic Certified® — goes beyond USDA Organic</li>
+          <li>USDA Organic — no synthetic pesticides or fertilizers</li>
+          <li>Non-GMO Project Verified</li>
+          <li>Certified Gluten-Free</li>
+          <li>California grown — consistently lower arsenic than rice from other US regions</li>
+          <li>Third-party heavy metals testing published since 2013</li>
+          <li>No chemical fumigants — food-grade CO2 used for storage freshness</li>
+          <li>Vegan and Kosher certified</li>
         </ul>
       </div>
-
-      <a href="https://verasalt.co/products/fine-pure-natural-spring-salt-300g-microplastic-free?variant=45452428673337" target="_blank" class="btn-buy-outline" onclick="gtag('event','affiliate_click',{'product':'vera-salt','location':'product-page-mid'})">
-        Click Here to Buy →
-      </a>
-
+      <a href="https://www.lundberg.com/collections/rice-quinoa/products/organic-long-grain-white-rice-2lb" target="_blank" class="btn-buy-outline" onclick="gtag('event','affiliate_click',{'product':'lundberg-rice','location':'product-page-mid'})">Click Here to Buy →</a>
     </div>
   </div>
 </section>
 
-<!-- EVALUATION SECTION -->
 <section class="evaluation-section">
   <div class="evaluation-inner">
     <p class="section-eyebrow">Our Evaluation</p>
-    <h2 class="section-title">Why We Chose Vera Salt</h2>
+    <h2 class="section-title">Why We Chose Lundberg Family Farms</h2>
     <div class="eval-body">
-      <p>We selected Vera Salt because it is a natural and unprocessed salt sourced from a protected ancient underground spring in the foothills of Spain, at over 2,000 feet elevation — naturally shielded from ocean pollution and human activity. It is hand-harvested using traditional methods only, with no bleaching, no washing, and no additives of any kind.</p>
-      <p>What sets Vera Salt apart from virtually every other salt on the market is its commitment to batch-level transparency. They test every single batch independently and publish the complete results — including current and historical reports — directly on their website for anyone to review. That level of openness is rare, and it is exactly the standard we look for in a Bonham Gold Label Product.</p>
+      <p>Rice is one of the most arsenic-contaminated staple foods in the American diet. Almost every sample of rice tested by independent researchers contains detectable arsenic — it is unavoidable because rice absorbs arsenic from soil and water more readily than most other crops. Given that reality, the question isn't whether a rice contains arsenic, but how much, how transparent the brand is about it, and whether the growing location minimizes the risk.</p>
+      <p>Lundberg Family Farms earns its Bonham Gold Label for three reasons: California sourcing, a decade-long commitment to published third-party heavy metals testing, and a Regenerative Organic Certification that explicitly prohibits glyphosate. Their long grain white rice tested at approximately 65 ppb total arsenic in Mamavation's independent testing — among the lowest results for any long grain white rice tested. Lead was non-detectable.</p>
+      <p>We are transparent that arsenic is detectable in this product. It is lower than virtually every competitor, and Lundberg is one of the only rice brands that has published its own testing data since 2013. That honesty is exactly what a Bonham Gold Label product looks like.</p>
     </div>
 
     <div class="source-block">
-      <p class="source-label">Per Vera Salt</p>
+      <p class="source-label">Per Lundberg Family Farms</p>
       <ul class="source-list">
-        <li>Sourced from a protected ancient underground spring in the foothills of Spain at over 2,000 feet elevation, naturally shielded from ocean pollution and human activity</li>
-        <li>Hand-harvested using traditional methods only</li>
-        <li>Natural and unprocessed — no bleaching, no washing, no additives, no anti-caking agents, or flow agents</li>
-        <li>Retains naturally occurring minerals including calcium, potassium, and magnesium</li>
-        <li>Every batch independently third-party lab tested for heavy metals and microplastics</li>
-        <li>Non-detect or extremely low levels of aluminum, arsenic, cadmium, lead, and mercury — among the lowest results for any unrefined salt</li>
-        <li>Confirmed microplastic-free in independent accredited lab testing</li>
-        <li>Plastic-free packaging options available</li>
+        <li>Regenerative Organic Certified® — the highest regenerative certification, requiring USDA Organic as a baseline and adding soil health, animal welfare, and farmer fairness criteria</li>
+        <li>Explicitly prohibits glyphosate and all toxic chemicals under the Regenerative Organic Certified standard</li>
+        <li>Third-party heavy metals testing conducted at AGQ Labs (accredited) since 2013 — results published publicly on their website</li>
+        <li>11-year average inorganic arsenic: 0.09 ppm — well below FDA, EFSA, and CODEX maximum levels</li>
+        <li>Cadmium average: less than 13 ppb — well below EU and CODEX maximums</li>
+        <li>No chemical fumigants — food-grade CO2 used to keep stored rice fresh</li>
+        <li>California grown — California soils consistently produce rice with lower arsenic than southern US growing regions</li>
       </ul>
-      <a href="https://verasalt.co/pages/lab-testing" target="_blank" class="cert-link">View Full Lab Testing Results & Historical Reports →</a>
+      <a href="https://www.lundberg.com/pages/heavy-metals-in-food" target="_blank" class="cert-link">Lundberg Heavy Metals Testing Page →</a>
+      <a href="https://info.lundberg.com/blog/regenerative-organic-certified" target="_blank" class="cert-link">Regenerative Organic Certification →</a>
     </div>
 
     <div class="source-block">
-      <p class="source-label">Per Independent Lab Testing</p>
+      <p class="source-label">Per Independent Testing</p>
       <ul class="source-list">
-        <li>Vera Salt conducts third-party lab testing on every single batch and publishes complete results including the latest 2026 reports and all previous years directly on their website</li>
-        <li>This ongoing, open approach to testing heavy metals and microplastics gives full confidence in the purity of their salt</li>
-        <li>Results consistently show non-detect or extremely low levels across all tested contaminants — among the best published results for any unrefined salt available</li>
+        <li>Mamavation sent 57 rice products to an EPA-certified independent laboratory to test for arsenic, lead, cadmium, and mercury. Lundberg Family Farms Long Grain White Rice tested at approximately 65 ppb total arsenic and non-detectable lead — placing it among the best performers in the entire study</li>
+        <li>Mamavation's guide specifically lists Lundberg Long Grain White Rice in their recommended "best" category for long grain rice based on arsenic levels below 0.1 ug/g total arsenic</li>
+        <li>An independent analysis of California-grown Lundberg rice varieties found virtually zero detectable lead, cadmium, and mercury — consistent with Lundberg's own published results</li>
       </ul>
-      <a href="https://verasalt.co/pages/lab-testing" target="_blank" class="cert-link">View Lab Testing Page →</a>
+      <a href="https://mamavation.com/food/long-grain-rice-arsenic.html" target="_blank" class="cert-link">Mamavation Long Grain Rice Testing →</a>
+      <a href="https://www.lundberg.com/pages/heavy-metals-in-food" target="_blank" class="cert-link">Lundberg Published Test Results →</a>
     </div>
 
     <div class="disclosure">
       <p class="disclosure-label">Affiliate Disclosure</p>
-      <p class="disclosure-text">This page contains affiliate links. If you make a purchase through our links, we may earn a commission at no extra cost to you. Vera Salt was selected entirely on merit — we evaluated this product before any affiliate relationship existed.</p>
+      <p class="disclosure-text">This page contains affiliate links. If you make a purchase through our links, we may earn a commission at no extra cost to you. Lundberg was selected entirely on merit — we evaluated this product before any affiliate relationship existed.</p>
     </div>
   </div>
 </section>
 
-<!-- RADAR SECTION -->
 <section class="radar-section">
   <div class="radar-inner">
     <p class="section-eyebrow" style="text-align:center">Bonham Gold Label Evaluation</p>
     <h2 style="font-family:'Cormorant Garamond',serif; font-size:clamp(1.6rem,2.5vw,2.2rem); font-weight:400; color:var(--brown); text-align:center; margin-bottom:48px;">Purity Profile</h2>
     <div class="radar-layout">
-
-      <!-- RADAR CHART -->
-      <div class="radar-container">
-        <canvas id="radarChart"></canvas>
-      </div>
-
-      <!-- PILLAR BREAKDOWN -->
+      <div><canvas id="radarChart"></canvas></div>
       <div class="pillar-breakdown">
         <div class="pillar-item">
-          <div class="pillar-name">Heavy Metals <span class="pillar-score">5/5</span></div>
-          <div class="pillar-desc">Every batch is independently third-party lab tested for arsenic, lead, cadmium, mercury, and aluminum. Full historical results are publicly published on Vera Salt's website — a best-in-class standard for transparency.</div>
+          <div class="pillar-name">Heavy Metals <span class="pillar-score mid">3/5</span></div>
+          <div class="pillar-desc">Arsenic is detectable at approximately 65 ppb — among the lowest of any long grain white rice tested independently, and well below FDA and EU limits. Lead is non-detectable. Cadmium averages less than 13 ppb. Lundberg has published third-party testing since 2013. Scored 3 rather than higher because arsenic is still present — we are honest that no rice is arsenic-free.</div>
         </div>
         <div class="pillar-item">
-          <div class="pillar-name">Microplastics <span class="pillar-score">5/5</span></div>
-          <div class="pillar-desc">Independently confirmed microplastic-free by accredited third-party lab testing on every batch. Published results are available publicly. This is one of the very few salts on the market to achieve this standard with documented proof.</div>
+          <div class="pillar-name">Pesticides <span class="pillar-score">4/5</span></div>
+          <div class="pillar-desc">Regenerative Organic Certified explicitly prohibits glyphosate and all synthetic pesticides. USDA Organic certified. No pesticide residue testing is published, but the certification standard is strong. Scored 4 rather than 5 because no independent pesticide lab results are publicly available.</div>
         </div>
         <div class="pillar-item">
           <div class="pillar-name">Chemicals & Toxins <span class="pillar-score">5/5</span></div>
-          <div class="pillar-desc">Completely unprocessed — no bleaching agents, no anti-caking agents, no flow agents, no washing, and no additives of any kind. What comes out of the spring goes into the package.</div>
+          <div class="pillar-desc">No synthetic pesticides, no toxic additives, no chemical fumigants. Lundberg uses food-grade CO2 instead of chemical fumigants to keep stored rice fresh — a meaningful distinction from conventional rice brands. Regenerative Organic Certified prohibits a wide range of toxic inputs.</div>
         </div>
         <div class="pillar-item">
-          <div class="pillar-name">Verified <span class="pillar-score">5/5</span></div>
-          <div class="pillar-desc">Verified through published batch-level third-party lab reports available to the public on Vera Salt's website. This is the highest level of verification a product can demonstrate — not just certified, but documented and open.</div>
+          <div class="pillar-name">GMO <span class="pillar-score">5/5</span></div>
+          <div class="pillar-desc">Non-GMO Project Verified. Regenerative Organic Certified also requires non-GMO as a baseline requirement. Rice is not currently a GMO crop in commercial production, but Lundberg's certifications confirm this explicitly.</div>
         </div>
         <div class="pillar-item">
-          <div class="pillar-name">Purity <span class="pillar-score">5/5</span></div>
-          <div class="pillar-desc">Sourced from a single protected ancient underground spring at elevation, naturally shielded from modern contamination. Hand-harvested with no mechanical processing. Retains its natural mineral profile intact.</div>
+          <div class="pillar-name">Verified <span class="pillar-score">4/5</span></div>
+          <div class="pillar-desc">Verified through published third-party heavy metals testing since 2013, Regenerative Organic Certification, Non-GMO Project Verification, and independent Mamavation testing. Scored 4 rather than 5 because batch-level Certificates of Analysis are not publicly available for every harvest.</div>
         </div>
         <div class="pillar-item">
-          <div class="pillar-name">Pesticides <span class="pillar-score na">N/A</span></div>
-          <div class="pillar-desc">Not applicable — salt is a mineral, not an agricultural product, and cannot contain pesticide residues. No evaluation needed or possible for this pillar.</div>
+          <div class="pillar-name">Purity <span class="pillar-score">4/5</span></div>
+          <div class="pillar-desc">California grown on family farms under Regenerative Organic standards since 1937. White rice is milled which removes the bran layer — a processing step that also reduces arsenic content compared to brown rice. Clean sourcing, minimal additives, and strong farming practices. Scored 4 because milling is a processing step and arsenic is detectable.</div>
         </div>
         <div class="pillar-item">
-          <div class="pillar-name">GMO <span class="pillar-score na">N/A</span></div>
-          <div class="pillar-desc">Not applicable — salt is a mineral and cannot be genetically modified. GMO concerns do not apply to this product category.</div>
+          <div class="pillar-name">Mold <span class="pillar-score low">1/5</span></div>
+          <div class="pillar-desc">No mold testing publicly disclosed. Dry rice can harbor mold under improper storage. Lundberg uses CO2 rather than chemical fumigants for storage — a positive practice — but mold testing is not published. Store in a cool, dry, airtight container.</div>
         </div>
         <div class="pillar-item">
-          <div class="pillar-name">Mold <span class="pillar-score na">N/A</span></div>
-          <div class="pillar-desc">Not applicable — salt's naturally antimicrobial properties make mold growth impossible under normal conditions. This is not a concern for this product type.</div>
+          <div class="pillar-name">Microplastics <span class="pillar-score na">N/A</span></div>
+          <div class="pillar-desc">Not applicable — microplastic contamination is not a known concern for dry rice in paper packaging under normal conditions. This pillar is not evaluated for this product type.</div>
         </div>
         <div class="pillar-item">
           <div class="pillar-name">Yeast <span class="pillar-score na">N/A</span></div>
-          <div class="pillar-desc">Not applicable — salt does not support yeast growth and this is not a concern for this product category.</div>
+          <div class="pillar-desc">Not applicable — yeast contamination is not a relevant concern for dry rice under normal storage conditions. This pillar is not evaluated for this product type.</div>
         </div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- CONTAMINANT BREAKDOWN -->
 <section class="contaminant-section">
   <div class="contaminant-inner">
     <p class="section-eyebrow" style="color:var(--gold)">Contaminant Status</p>
@@ -384,57 +318,51 @@
     <div class="contaminant-grid">
       <div class="contaminant-item">
         <div class="contaminant-name">Heavy Metals</div>
-        <div class="contaminant-status">Non-detect or extremely low levels of arsenic, lead, cadmium, mercury, and aluminum confirmed by independent third-party lab testing on every batch. Full published results available publicly.</div>
-      </div>
-      <div class="contaminant-item">
-        <div class="contaminant-name">Microplastics</div>
-        <div class="contaminant-status">Confirmed microplastic-free by independent accredited lab testing. Published batch results available on Vera Salt's website. One of the only salts to achieve this with documented proof.</div>
-      </div>
-      <div class="contaminant-item">
-        <div class="contaminant-name">Chemicals & Toxins</div>
-        <div class="contaminant-status">No bleaching agents, no anti-caking agents, no flow agents, no washing, and no additives of any kind. Completely natural and unprocessed from spring to package.</div>
+        <div class="contaminant-status">Arsenic detectable at ~65 ppb total arsenic — among the lowest for any long grain white rice tested independently. Lead non-detectable. Cadmium average under 13 ppb. Third-party testing published since 2013. Arsenic is present but at far lower levels than most competitors.</div>
       </div>
       <div class="contaminant-item">
         <div class="contaminant-name">Pesticides</div>
-        <div class="contaminant-status">Not applicable. Salt is a mineral and cannot contain pesticide residues. No concern for this product type.</div>
+        <div class="contaminant-status">Regenerative Organic Certified explicitly prohibits glyphosate and all synthetic pesticides. USDA Organic certified. No independent pesticide residue testing published, but certification standard is strong and comprehensive.</div>
+      </div>
+      <div class="contaminant-item">
+        <div class="contaminant-name">Chemicals & Toxins</div>
+        <div class="contaminant-status">No synthetic pesticides, no toxic additives, no chemical fumigants. Food-grade CO2 used for storage instead of chemical fumigants. One of the cleanest storage practices in the rice industry.</div>
       </div>
       <div class="contaminant-item">
         <div class="contaminant-name">GMO</div>
-        <div class="contaminant-status">Not applicable. Salt is a mineral and cannot be genetically modified. No concern for this product type.</div>
+        <div class="contaminant-status">Non-GMO Project Verified. Regenerative Organic Certified also requires non-GMO compliance. Not a concern for this product.</div>
       </div>
       <div class="contaminant-item">
         <div class="contaminant-name">Mold</div>
-        <div class="contaminant-status">Not applicable. Salt's antimicrobial properties prevent mold growth under normal storage conditions. No concern for this product type.</div>
+        <div class="contaminant-status">No mold testing publicly disclosed. Dry rice can harbor mold under improper storage conditions. Store in a cool, dry, airtight container and use within a reasonable timeframe.</div>
+      </div>
+      <div class="contaminant-item">
+        <div class="contaminant-name">Microplastics</div>
+        <div class="contaminant-status">Not applicable. Not a known concern for dry rice in paper packaging under normal conditions.</div>
       </div>
       <div class="contaminant-item">
         <div class="contaminant-name">Yeast</div>
-        <div class="contaminant-status">Not applicable. Salt does not support yeast growth. No concern for this product type.</div>
+        <div class="contaminant-status">Not applicable. Not a relevant concern for dry rice under normal storage conditions.</div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- BUY CTA -->
 <section class="buy-cta">
   <div class="buy-cta-inner">
-    <h2 class="buy-cta-title">Ready to Try Vera Salt?</h2>
-    <p class="buy-cta-sub">The only fine spring salt with published batch-level lab results for heavy metals and microplastics. This is the salt our family uses and trusts.</p>
-    <a href="https://verasalt.co/products/fine-pure-natural-spring-salt-300g-microplastic-free?variant=45452428673337" target="_blank" class="btn-buy-large" onclick="gtag('event','affiliate_click',{'product':'vera-salt','location':'product-page-bottom'})">
-      Click Here to Buy →
-    </a>
+    <h2 class="buy-cta-title">Ready to Try Lundberg Rice?</h2>
+    <p class="buy-cta-sub">California grown, Regenerative Organic Certified, with over a decade of published heavy metals testing. Among the lowest arsenic levels of any long grain white rice independently tested. This is the rice our family eats.</p>
+    <a href="https://www.lundberg.com/collections/rice-quinoa/products/organic-long-grain-white-rice-2lb" target="_blank" class="btn-buy-large" onclick="gtag('event','affiliate_click',{'product':'lundberg-rice','location':'product-page-bottom'})">Click Here to Buy →</a>
   </div>
 </section>
 
-<!-- RELATED POSTS -->
 <section class="related-section">
   <div class="related-inner">
     <p class="section-eyebrow">Continue Reading</p>
     <h2 style="font-family:'Cormorant Garamond',serif; font-size:clamp(1.6rem,2.5vw,2rem); font-weight:400; color:var(--brown);">Related Blog Posts</h2>
     <div class="related-grid">
       <a href="blog-post-intro.html" class="blog-card">
-        <div class="blog-card-img">
-          <img src="https://images.unsplash.com/photo-1493770348161-369560ae357d?w=600&q=80" alt="Blog"/>
-        </div>
+        <div class="blog-card-img"><img src="https://images.unsplash.com/photo-1493770348161-369560ae357d?w=600&q=80" alt="Blog"/></div>
         <div class="blog-card-body">
           <div class="blog-tag">Bonham Brands</div>
           <div class="blog-card-title">Who We Are and Why We Started Bonham Brands</div>
@@ -442,22 +370,18 @@
         </div>
       </a>
       <a href="blog.html" class="blog-card">
-        <div class="blog-card-img" style="min-height:160px;">
-          <span style="font-family:'Cormorant Garamond',serif; font-size: 1.2rem; color:var(--text-muted);">Coming Soon</span>
-        </div>
+        <div class="blog-card-img" style="min-height:160px;"><span style="font-family:'Cormorant Garamond',serif; font-size: 1.2rem; color:var(--text-muted);">Coming Soon</span></div>
         <div class="blog-card-body">
-          <div class="blog-tag">Microplastics</div>
-          <div class="blog-card-title">Microplastics in Your Salt: What We Found</div>
+          <div class="blog-tag">Heavy Metals</div>
+          <div class="blog-card-title">Arsenic in Rice: What the Labels Don't Tell You</div>
           <div class="blog-card-meta">The Bonham Family · Coming Soon</div>
         </div>
       </a>
       <a href="blog.html" class="blog-card">
-        <div class="blog-card-img" style="min-height:160px;">
-          <span style="font-family:'Cormorant Garamond',serif; font-size: 1.2rem; color:var(--text-muted);">Coming Soon</span>
-        </div>
+        <div class="blog-card-img" style="min-height:160px;"><span style="font-family:'Cormorant Garamond',serif; font-size: 1.2rem; color:var(--text-muted);">Coming Soon</span></div>
         <div class="blog-card-body">
-          <div class="blog-tag">Heavy Metals</div>
-          <div class="blog-card-title">Why "Organic" Doesn't Mean Metal-Free</div>
+          <div class="blog-tag">Food Safety</div>
+          <div class="blog-card-title">Why California Rice Has Lower Arsenic Than Southern US Rice</div>
           <div class="blog-card-meta">The Bonham Family · Coming Soon</div>
         </div>
       </a>
@@ -465,7 +389,6 @@
   </div>
 </section>
 
-<!-- NEWSLETTER -->
 <section class="newsletter">
   <div class="newsletter-inner">
     <p style="font-size: 0.95rem; font-weight:600; letter-spacing:0.3em; text-transform:uppercase; color:var(--gold); margin-bottom:12px;">Stay Informed</p>
@@ -478,7 +401,6 @@
   </div>
 </section>
 
-<!-- FOOTER -->
 <footer>
   <div class="footer-inner">
     <div class="footer-brand">
@@ -511,26 +433,21 @@
   </div>
 </footer>
 
-<!-- CHART.JS FOR RADAR -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js"></script>
 <script>
-  // Gallery switcher — clicking a thumbnail updates the main image
   function setImg(thumb, src) {
     document.getElementById('mainImgEl').src = src;
     document.querySelectorAll('.thumb').forEach(t => t.classList.remove('active'));
     thumb.classList.add('active');
   }
-
-  // Radar chart — only applicable pillars shown
-  // Scores: 0=unknown, 1=poor, 2=fair, 3=good, 4=strong, 5=exceptional
   const ctx = document.getElementById('radarChart').getContext('2d');
   new Chart(ctx, {
     type: 'radar',
     data: {
-      labels: ['Heavy Metals', 'Microplastics', 'Chemicals\n& Toxins', 'Verified', 'Purity'],
+      labels: ['Heavy\nMetals', 'Pesticides', 'Chemicals\n& Toxins', 'GMO', 'Verified', 'Purity', 'Mold'],
       datasets: [{
-        label: 'Vera Salt',
-        data: [5, 5, 5, 5, 5],
+        label: 'Lundberg Long Grain White Rice',
+        data: [3, 4, 5, 5, 4, 4, 1],
         backgroundColor: 'rgba(184,151,58,0.15)',
         borderColor: '#b8973a',
         borderWidth: 2,
@@ -545,27 +462,16 @@
       responsive: true,
       scales: {
         r: {
-          min: 0,
-          max: 5,
-          ticks: {
-            stepSize: 1,
-            display: false,
-          },
+          min: 0, max: 5,
+          ticks: { stepSize: 1, display: false },
           grid: { color: 'rgba(184,151,58,0.2)' },
           angleLines: { color: 'rgba(184,151,58,0.2)' },
-          pointLabels: {
-            font: { family: 'Josefin Sans', size: 11, weight: '600' },
-            color: '#6b5a3e',
-          }
+          pointLabels: { font: { family: 'Josefin Sans', size: 11, weight: '600' }, color: '#6b5a3e' }
         }
       },
       plugins: {
         legend: { display: false },
-        tooltip: {
-          callbacks: {
-            label: ctx => `Score: ${ctx.raw}/5`
-          }
-        }
+        tooltip: { callbacks: { label: ctx => `Score: ${ctx.raw}/5` } }
       }
     }
   });

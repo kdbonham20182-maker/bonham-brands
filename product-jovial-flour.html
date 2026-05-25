@@ -27,26 +27,26 @@
     nav { position: fixed; top: 0; left: 0; right: 0; z-index: 1000; background: var(--cream); border-bottom: 1px solid rgba(184,151,58,0.3); display: flex; align-items: center; justify-content: space-between; padding: 0 48px; height: 72px; box-shadow: 0 2px 20px rgba(59,47,30,0.08); }
     .nav-logo { display: flex; align-items: center; gap: 12px; text-decoration: none; }
     .nav-logo img { height: 48px; width: 48px; object-fit: contain; }
-    .nav-logo-text { font-family: 'Cormorant Garamond', serif; font-size: 1.2rem; font-weight: 600; letter-spacing: 0.15em; color: var(--brown); text-transform: uppercase; }
+    .nav-logo-text { font-family: 'Cormorant Garamond', serif; font-size: 1.5rem; font-weight: 600; letter-spacing: 0.15em; color: var(--brown); text-transform: uppercase; }
     .nav-links { display: flex; align-items: center; list-style: none; }
     .nav-links > li { position: relative; }
-    .nav-links > li > a { display: block; padding: 0 16px; height: 72px; line-height: 72px; font-size: 0.72rem; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: var(--brown); text-decoration: none; transition: color 0.2s; white-space: nowrap; }
+    .nav-links > li > a { display: block; padding: 0 16px; height: 72px; line-height: 72px; font-size: 1.02rem; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: var(--brown); text-decoration: none; transition: color 0.2s; white-space: nowrap; }
     .nav-links > li > a:hover, .nav-links > li > a.active { color: var(--gold); }
     .has-dropdown:hover .dropdown { display: block; }
     .dropdown { display: none; position: absolute; top: 72px; left: 0; background: var(--white); border: 1px solid rgba(184,151,58,0.2); border-top: 2px solid var(--gold); min-width: 200px; box-shadow: 0 8px 32px rgba(59,47,30,0.12); }
-    .dropdown a { display: block; padding: 12px 20px; font-size: 0.7rem; font-weight: 400; letter-spacing: 0.1em; text-transform: uppercase; color: var(--brown); text-decoration: none; transition: background 0.15s, color 0.15s; border-bottom: 1px solid rgba(184,151,58,0.1); }
+    .dropdown a { display: block; padding: 12px 20px; font-size: 1.0rem; font-weight: 400; letter-spacing: 0.1em; text-transform: uppercase; color: var(--brown); text-decoration: none; transition: background 0.15s, color 0.15s; border-bottom: 1px solid rgba(184,151,58,0.1); }
     .dropdown a:last-child { border-bottom: none; }
     .dropdown a:hover { background: var(--cream); color: var(--gold); }
-    .nav-x { display: flex; align-items: center; gap: 8px; padding: 8px 18px; border: 1px solid var(--gold); color: var(--gold); text-decoration: none; font-size: 0.68rem; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; transition: background 0.2s, color 0.2s; }
+    .nav-x { display: flex; align-items: center; gap: 8px; padding: 8px 18px; border: 1px solid var(--gold); color: var(--gold); text-decoration: none; font-size: 0.98rem; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; transition: background 0.2s, color 0.2s; }
     .nav-x:hover { background: var(--gold); color: var(--white); }
 
     /* BREADCRUMB */
     .breadcrumb { margin-top: 72px; padding: 16px 48px; background: var(--white); border-bottom: 1px solid rgba(184,151,58,0.15); }
     .breadcrumb-inner { max-width: 1200px; margin: 0 auto; display: flex; align-items: center; gap: 8px; }
-    .breadcrumb a { font-size: 0.65rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--text-muted); text-decoration: none; transition: color 0.2s; }
+    .breadcrumb a { font-size: 0.95rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--text-muted); text-decoration: none; transition: color 0.2s; }
     .breadcrumb a:hover { color: var(--gold); }
-    .breadcrumb span { font-size: 0.65rem; color: var(--text-muted); }
-    .breadcrumb-current { font-size: 0.65rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--gold-dark); }
+    .breadcrumb span { font-size: 0.95rem; color: var(--text-muted); }
+    .breadcrumb-current { font-size: 0.95rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--gold-dark); }
 
     /* PRODUCT HERO */
     .product-hero { padding: 64px 48px; background: var(--cream); }
@@ -65,38 +65,38 @@
     /* PRODUCT INFO */
     .product-info { min-width: 0; }
     .product-category-tags { display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 16px; }
-    .cat-tag { font-size: 0.6rem; font-weight: 600; letter-spacing: 0.2em; text-transform: uppercase; color: var(--gold-dark); background: var(--cream-dark); padding: 4px 10px; border: 1px solid rgba(184,151,58,0.25); }
+    .cat-tag { font-size: 0.9rem; font-weight: 600; letter-spacing: 0.2em; text-transform: uppercase; color: var(--gold-dark); background: var(--cream-dark); padding: 4px 10px; border: 1px solid rgba(184,151,58,0.25); }
     .product-name { font-family: 'Cormorant Garamond', serif; font-size: clamp(1.8rem, 3vw, 2.6rem); font-weight: 400; color: var(--brown); line-height: 1.2; margin-bottom: 8px; }
-    .product-brand { font-size: 0.72rem; font-weight: 600; letter-spacing: 0.2em; text-transform: uppercase; color: var(--text-muted); margin-bottom: 32px; }
+    .product-brand { font-size: 1.02rem; font-weight: 600; letter-spacing: 0.2em; text-transform: uppercase; color: var(--text-muted); margin-bottom: 32px; }
     .gold-divider { width: 48px; height: 2px; background: var(--gold); margin-bottom: 32px; }
-    .btn-buy { display: block; width: 100%; padding: 18px; background: var(--gold); color: var(--white); font-family: 'Josefin Sans', sans-serif; font-size: 0.8rem; font-weight: 600; letter-spacing: 0.25em; text-transform: uppercase; text-decoration: none; text-align: center; transition: background 0.2s, transform 0.2s; margin-bottom: 16px; border: none; cursor: pointer; }
+    .btn-buy { display: block; width: 100%; padding: 18px; background: var(--gold); color: var(--white); font-family: 'Josefin Sans', sans-serif; font-size: 1.1rem; font-weight: 600; letter-spacing: 0.25em; text-transform: uppercase; text-decoration: none; text-align: center; transition: background 0.2s, transform 0.2s; margin-bottom: 16px; border: none; cursor: pointer; }
     .btn-buy:hover { background: var(--gold-dark); transform: translateY(-2px); }
-    .btn-buy-outline { display: block; width: 100%; padding: 16px; background: transparent; color: var(--gold-dark); font-family: 'Josefin Sans', sans-serif; font-size: 0.75rem; font-weight: 600; letter-spacing: 0.2em; text-transform: uppercase; text-decoration: none; text-align: center; border: 1px solid var(--gold); transition: background 0.2s, color 0.2s; margin-bottom: 32px; }
+    .btn-buy-outline { display: block; width: 100%; padding: 16px; background: transparent; color: var(--gold-dark); font-family: 'Josefin Sans', sans-serif; font-size: 1.05rem; font-weight: 600; letter-spacing: 0.2em; text-transform: uppercase; text-decoration: none; text-align: center; border: 1px solid var(--gold); transition: background 0.2s, color 0.2s; margin-bottom: 32px; }
     .btn-buy-outline:hover { background: var(--gold); color: var(--white); }
     .quick-facts { background: var(--white); border: 1px solid rgba(184,151,58,0.2); padding: 24px; margin-bottom: 32px; }
-    .quick-facts-title { font-size: 0.62rem; font-weight: 600; letter-spacing: 0.25em; text-transform: uppercase; color: var(--gold); margin-bottom: 16px; }
+    .quick-facts-title { font-size: 0.92rem; font-weight: 600; letter-spacing: 0.25em; text-transform: uppercase; color: var(--gold); margin-bottom: 16px; }
     .fact-list { list-style: none; }
-    .fact-list li { font-size: 0.78rem; font-weight: 300; color: var(--text); line-height: 1.7; padding: 6px 0; border-bottom: 1px solid rgba(184,151,58,0.1); display: flex; align-items: flex-start; gap: 10px; }
+    .fact-list li { font-size: 1.08rem; font-weight: 300; color: var(--text); line-height: 1.7; padding: 6px 0; border-bottom: 1px solid rgba(184,151,58,0.1); display: flex; align-items: flex-start; gap: 10px; }
     .fact-list li:last-child { border-bottom: none; }
-    .fact-list li::before { content: '✓'; color: var(--gold); font-size: 0.7rem; margin-top: 2px; flex-shrink: 0; }
+    .fact-list li::before { content: '✓'; color: var(--gold); font-size: 1.0rem; margin-top: 2px; flex-shrink: 0; }
 
     /* EVALUATION */
     .evaluation-section { padding: 80px 48px; background: var(--white); border-top: 3px solid var(--gold); }
     .evaluation-inner { max-width: 860px; margin: 0 auto; }
-    .section-eyebrow { font-size: 0.65rem; font-weight: 600; letter-spacing: 0.3em; text-transform: uppercase; color: var(--gold); margin-bottom: 12px; }
+    .section-eyebrow { font-size: 0.95rem; font-weight: 600; letter-spacing: 0.3em; text-transform: uppercase; color: var(--gold); margin-bottom: 12px; }
     .section-title { font-family: 'Cormorant Garamond', serif; font-size: clamp(1.6rem, 2.5vw, 2.2rem); font-weight: 400; color: var(--brown); line-height: 1.25; margin-bottom: 24px; }
-    .eval-body { font-size: 0.88rem; font-weight: 300; line-height: 2; color: var(--text); margin-bottom: 32px; }
+    .eval-body { font-size: 1.18rem; font-weight: 300; line-height: 2; color: var(--text); margin-bottom: 32px; }
     .eval-body p { margin-bottom: 20px; }
     .source-block { background: var(--cream); border-left: 3px solid var(--gold); padding: 24px 28px; margin-bottom: 24px; }
-    .source-label { font-size: 0.6rem; font-weight: 600; letter-spacing: 0.25em; text-transform: uppercase; color: var(--gold-dark); margin-bottom: 12px; }
+    .source-label { font-size: 0.9rem; font-weight: 600; letter-spacing: 0.25em; text-transform: uppercase; color: var(--gold-dark); margin-bottom: 12px; }
     .source-list { list-style: none; }
-    .source-list li { font-size: 0.82rem; font-weight: 300; color: var(--text); line-height: 1.8; padding: 5px 0; display: flex; align-items: flex-start; gap: 10px; }
+    .source-list li { font-size: 1.12rem; font-weight: 300; color: var(--text); line-height: 1.8; padding: 5px 0; display: flex; align-items: flex-start; gap: 10px; }
     .source-list li::before { content: '—'; color: var(--gold); flex-shrink: 0; }
-    .cert-link { display: inline-flex; align-items: center; gap: 6px; font-size: 0.65rem; font-weight: 600; letter-spacing: 0.15em; text-transform: uppercase; color: var(--gold-dark); text-decoration: none; border-bottom: 1px solid rgba(184,151,58,0.4); padding-bottom: 2px; transition: color 0.2s; margin-top: 12px; margin-right: 16px; }
+    .cert-link { display: inline-flex; align-items: center; gap: 6px; font-size: 0.95rem; font-weight: 600; letter-spacing: 0.15em; text-transform: uppercase; color: var(--gold-dark); text-decoration: none; border-bottom: 1px solid rgba(184,151,58,0.4); padding-bottom: 2px; transition: color 0.2s; margin-top: 12px; margin-right: 16px; }
     .cert-link:hover { color: var(--gold); }
     .disclosure { margin: 40px 0 0; padding: 20px 24px; background: var(--cream-dark); border-left: 3px solid var(--gold); }
-    .disclosure-label { font-size: 0.6rem; font-weight: 600; letter-spacing: 0.2em; text-transform: uppercase; color: var(--gold-dark); margin-bottom: 6px; }
-    .disclosure-text { font-size: 0.72rem; font-weight: 300; color: var(--text-muted); line-height: 1.7; font-style: italic; }
+    .disclosure-label { font-size: 0.9rem; font-weight: 600; letter-spacing: 0.2em; text-transform: uppercase; color: var(--gold-dark); margin-bottom: 6px; }
+    .disclosure-text { font-size: 1.02rem; font-weight: 300; color: var(--text-muted); line-height: 1.7; font-style: italic; }
 
     /* RADAR */
     .radar-section { padding: 80px 48px; background: var(--cream-dark); }
@@ -105,26 +105,26 @@
     .pillar-breakdown { }
     .pillar-item { padding: 16px 0; border-bottom: 1px solid rgba(184,151,58,0.15); }
     .pillar-item:last-child { border-bottom: none; }
-    .pillar-name { font-size: 0.65rem; font-weight: 600; letter-spacing: 0.2em; text-transform: uppercase; color: var(--gold-dark); margin-bottom: 6px; display: flex; align-items: center; gap: 8px; }
-    .pillar-score { font-size: 0.6rem; font-weight: 600; padding: 2px 8px; background: var(--gold); color: var(--white); }
+    .pillar-name { font-size: 0.95rem; font-weight: 600; letter-spacing: 0.2em; text-transform: uppercase; color: var(--gold-dark); margin-bottom: 6px; display: flex; align-items: center; gap: 8px; }
+    .pillar-score { font-size: 0.9rem; font-weight: 600; padding: 2px 8px; background: var(--gold); color: var(--white); }
     .pillar-score.na { background: var(--cream-dark); color: var(--text-muted); border: 1px solid rgba(184,151,58,0.2); }
     .pillar-score.low { background: #8a6e28; }
-    .pillar-desc { font-size: 0.78rem; font-weight: 300; color: var(--text); line-height: 1.7; }
+    .pillar-desc { font-size: 1.08rem; font-weight: 300; color: var(--text); line-height: 1.7; }
 
     /* CONTAMINANT */
     .contaminant-section { padding: 80px 48px; background: var(--brown); }
     .contaminant-inner { max-width: 860px; margin: 0 auto; }
     .contaminant-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 2px; background: rgba(184,151,58,0.15); margin-top: 40px; }
     .contaminant-item { padding: 24px; background: rgba(255,255,255,0.03); }
-    .contaminant-name { font-size: 0.62rem; font-weight: 600; letter-spacing: 0.2em; text-transform: uppercase; color: var(--gold); margin-bottom: 8px; }
-    .contaminant-status { font-size: 0.78rem; font-weight: 300; color: rgba(253,250,244,0.8); line-height: 1.7; }
+    .contaminant-name { font-size: 0.92rem; font-weight: 600; letter-spacing: 0.2em; text-transform: uppercase; color: var(--gold); margin-bottom: 8px; }
+    .contaminant-status { font-size: 1.08rem; font-weight: 300; color: rgba(253,250,244,0.8); line-height: 1.7; }
 
     /* BUY CTA */
     .buy-cta { padding: 80px 48px; background: var(--cream); text-align: center; }
     .buy-cta-inner { max-width: 560px; margin: 0 auto; }
     .buy-cta-title { font-family: 'Cormorant Garamond', serif; font-size: clamp(1.6rem, 2.5vw, 2.2rem); font-weight: 400; color: var(--brown); margin-bottom: 12px; }
-    .buy-cta-sub { font-size: 0.78rem; font-weight: 300; color: var(--text-muted); margin-bottom: 32px; line-height: 1.8; }
-    .btn-buy-large { display: inline-block; padding: 18px 56px; background: var(--gold); color: var(--white); font-family: 'Josefin Sans', sans-serif; font-size: 0.8rem; font-weight: 600; letter-spacing: 0.25em; text-transform: uppercase; text-decoration: none; transition: background 0.2s, transform 0.2s; }
+    .buy-cta-sub { font-size: 1.08rem; font-weight: 300; color: var(--text-muted); margin-bottom: 32px; line-height: 1.8; }
+    .btn-buy-large { display: inline-block; padding: 18px 56px; background: var(--gold); color: var(--white); font-family: 'Josefin Sans', sans-serif; font-size: 1.1rem; font-weight: 600; letter-spacing: 0.25em; text-transform: uppercase; text-decoration: none; transition: background 0.2s, transform 0.2s; }
     .btn-buy-large:hover { background: var(--gold-dark); transform: translateY(-2px); }
 
     /* RELATED */
@@ -136,34 +136,34 @@
     .blog-card-img { width: 100%; aspect-ratio: 16/9; overflow: hidden; background: var(--cream-dark); display: flex; align-items: center; justify-content: center; }
     .blog-card-img img { width: 100%; height: 100%; object-fit: cover; }
     .blog-card-body { padding: 24px 20px; }
-    .blog-tag { font-size: 0.58rem; font-weight: 600; letter-spacing: 0.2em; text-transform: uppercase; color: var(--gold); margin-bottom: 10px; }
-    .blog-card-title { font-family: 'Cormorant Garamond', serif; font-size: 1.15rem; font-weight: 600; color: var(--brown); line-height: 1.3; margin-bottom: 10px; }
-    .blog-card-meta { font-size: 0.6rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--text-muted); padding-top: 14px; border-top: 1px solid var(--cream-dark); }
+    .blog-tag { font-size: 0.88rem; font-weight: 600; letter-spacing: 0.2em; text-transform: uppercase; color: var(--gold); margin-bottom: 10px; }
+    .blog-card-title { font-family: 'Cormorant Garamond', serif; font-size: 1.45rem; font-weight: 600; color: var(--brown); line-height: 1.3; margin-bottom: 10px; }
+    .blog-card-meta { font-size: 0.9rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--text-muted); padding-top: 14px; border-top: 1px solid var(--cream-dark); }
 
     /* NEWSLETTER */
     .newsletter { padding: 80px 48px; background: var(--brown); }
     .newsletter-inner { max-width: 560px; margin: 0 auto; text-align: center; }
     .newsletter-title { font-family: 'Cormorant Garamond', serif; font-size: clamp(1.5rem, 2.5vw, 2rem); font-weight: 400; color: var(--white); margin-bottom: 16px; }
-    .newsletter-sub { font-size: 0.78rem; font-weight: 300; color: rgba(253,250,244,0.6); margin-bottom: 32px; line-height: 1.8; }
+    .newsletter-sub { font-size: 1.08rem; font-weight: 300; color: rgba(253,250,244,0.6); margin-bottom: 32px; line-height: 1.8; }
     .newsletter-form { display: flex; max-width: 440px; margin: 0 auto; }
-    .newsletter-form input { flex: 1; padding: 13px 18px; background: rgba(255,255,255,0.08); border: 1px solid rgba(184,151,58,0.3); border-right: none; color: var(--white); font-family: 'Josefin Sans', sans-serif; font-size: 0.75rem; outline: none; }
+    .newsletter-form input { flex: 1; padding: 13px 18px; background: rgba(255,255,255,0.08); border: 1px solid rgba(184,151,58,0.3); border-right: none; color: var(--white); font-family: 'Josefin Sans', sans-serif; font-size: 1.05rem; outline: none; }
     .newsletter-form input::placeholder { color: rgba(253,250,244,0.4); }
-    .newsletter-form button { padding: 13px 24px; background: var(--gold); border: none; color: var(--white); font-family: 'Josefin Sans', sans-serif; font-size: 0.68rem; font-weight: 600; letter-spacing: 0.15em; text-transform: uppercase; cursor: pointer; transition: background 0.2s; }
+    .newsletter-form button { padding: 13px 24px; background: var(--gold); border: none; color: var(--white); font-family: 'Josefin Sans', sans-serif; font-size: 0.98rem; font-weight: 600; letter-spacing: 0.15em; text-transform: uppercase; cursor: pointer; transition: background 0.2s; }
     .newsletter-form button:hover { background: var(--gold-dark); }
 
     /* FOOTER */
     footer { background: #1e160d; padding: 60px 48px 32px; }
     .footer-inner { max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 48px; padding-bottom: 48px; border-bottom: 1px solid rgba(184,151,58,0.15); }
     .footer-brand img { height: 56px; margin-bottom: 16px; }
-    .footer-tagline { font-family: 'Cormorant Garamond', serif; font-size: 0.95rem; font-style: italic; color: rgba(253,250,244,0.5); line-height: 1.6; }
-    .footer-heading { font-size: 0.62rem; font-weight: 600; letter-spacing: 0.25em; text-transform: uppercase; color: var(--gold); margin-bottom: 20px; }
+    .footer-tagline { font-family: 'Cormorant Garamond', serif; font-size: 1.25rem; font-style: italic; color: rgba(253,250,244,0.5); line-height: 1.6; }
+    .footer-heading { font-size: 0.92rem; font-weight: 600; letter-spacing: 0.25em; text-transform: uppercase; color: var(--gold); margin-bottom: 20px; }
     .footer-links { list-style: none; }
     .footer-links li { margin-bottom: 10px; }
-    .footer-links a { font-size: 0.78rem; font-weight: 300; letter-spacing: 0.08em; color: rgba(253,250,244,0.5); text-decoration: none; transition: color 0.2s; }
+    .footer-links a { font-size: 1.08rem; font-weight: 300; letter-spacing: 0.08em; color: rgba(253,250,244,0.5); text-decoration: none; transition: color 0.2s; }
     .footer-links a:hover { color: var(--gold-light); }
     .footer-bottom { max-width: 1200px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; padding-top: 28px; }
-    .footer-copy { font-size: 0.65rem; letter-spacing: 0.1em; color: rgba(253,250,244,0.3); }
-    .footer-disclosure { font-size: 0.62rem; color: rgba(253,250,244,0.25); max-width: 480px; text-align: right; font-style: italic; line-height: 1.6; }
+    .footer-copy { font-size: 0.95rem; letter-spacing: 0.1em; color: rgba(253,250,244,0.3); }
+    .footer-disclosure { font-size: 0.92rem; color: rgba(253,250,244,0.25); max-width: 480px; text-align: right; font-style: italic; line-height: 1.6; }
   </style>
 </head>
 <body>
@@ -364,7 +364,7 @@
   <div class="contaminant-inner">
     <p class="section-eyebrow" style="color:var(--gold)">Contaminant Status</p>
     <h2 style="font-family:'Cormorant Garamond',serif; font-size:clamp(1.6rem,2.5vw,2.2rem); font-weight:400; color:var(--white); margin-bottom:8px;">What We Know About This Product</h2>
-    <p style="font-size:0.82rem; font-weight:300; color:rgba(253,250,244,0.65); line-height:1.8;">A transparent breakdown of every contaminant category and what is known — or not known — about this specific product.</p>
+    <p style="font-size: 1.12rem; font-weight:300; color:rgba(253,250,244,0.65); line-height:1.8;">A transparent breakdown of every contaminant category and what is known — or not known — about this specific product.</p>
     <div class="contaminant-grid">
       <div class="contaminant-item">
         <div class="contaminant-name">Pesticides</div>
@@ -427,7 +427,7 @@
       </a>
       <a href="blog.html" class="blog-card">
         <div class="blog-card-img" style="min-height:160px;">
-          <span style="font-family:'Cormorant Garamond',serif; font-size:0.9rem; color:var(--text-muted);">Coming Soon</span>
+          <span style="font-family:'Cormorant Garamond',serif; font-size: 1.2rem; color:var(--text-muted);">Coming Soon</span>
         </div>
         <div class="blog-card-body">
           <div class="blog-tag">Pesticides</div>
@@ -437,7 +437,7 @@
       </a>
       <a href="blog.html" class="blog-card">
         <div class="blog-card-img" style="min-height:160px;">
-          <span style="font-family:'Cormorant Garamond',serif; font-size:0.9rem; color:var(--text-muted);">Coming Soon</span>
+          <span style="font-family:'Cormorant Garamond',serif; font-size: 1.2rem; color:var(--text-muted);">Coming Soon</span>
         </div>
         <div class="blog-card-body">
           <div class="blog-tag">Food Safety</div>
@@ -452,7 +452,7 @@
 <!-- NEWSLETTER -->
 <section class="newsletter">
   <div class="newsletter-inner">
-    <p style="font-size:0.65rem; font-weight:600; letter-spacing:0.3em; text-transform:uppercase; color:var(--gold); margin-bottom:12px;">Stay Informed</p>
+    <p style="font-size: 0.95rem; font-weight:600; letter-spacing:0.3em; text-transform:uppercase; color:var(--gold); margin-bottom:12px;">Stay Informed</p>
     <h2 class="newsletter-title">Join the Community</h2>
     <p class="newsletter-sub">Get our latest product discoveries and research delivered directly to your inbox.</p>
     <form class="newsletter-form" onsubmit="return false;">
