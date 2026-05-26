@@ -228,7 +228,7 @@
         ====================================================== -->
 
         <!-- Vera Salt -->
-        <a href="product-vera-salt.html" class="product-card"
+        <a href="product-vera-salt.html" class="product-card" data-publish="vera-salt"
            data-cats="food"
            data-subs="salt">
           <div class="product-card-img">
@@ -468,6 +468,16 @@
   } else {
     updateGrid();
   }
+</script>
+
+<script>
+  (function() {
+    var publish = new Date("2026-05-27T09:00:00-04:00");
+    if (new Date() < publish) {
+      var cards = document.querySelectorAll('[data-publish="vera-salt"]');
+      cards.forEach(function(c) { c.style.display = 'none'; });
+    }
+  })();
 </script>
 </body>
 </html>

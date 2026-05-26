@@ -256,7 +256,7 @@
              data-sort = YYYYMMDD for sorting newest first
         ====================================================== -->
 
-        <a href="blog-post-vera-salt.html" class="blog-card"
+        <a href="blog-post-vera-salt.html" class="blog-card" data-publish="vera-salt"
            data-cats="food"
            data-subs="salt"
            data-sort="20260526">
@@ -410,6 +410,16 @@
   });
 
   updateGrid();
+</script>
+
+<script>
+  (function() {
+    var publish = new Date("2026-05-27T09:00:00-04:00");
+    if (new Date() < publish) {
+      var cards = document.querySelectorAll('[data-publish="vera-salt"]');
+      cards.forEach(function(c) { c.style.display = 'none'; });
+    }
+  })();
 </script>
 </body>
 </html>
