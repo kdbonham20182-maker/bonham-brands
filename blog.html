@@ -256,6 +256,21 @@
              data-sort = YYYYMMDD for sorting newest first
         ====================================================== -->
 
+                <a href="blog-post-jovial-flour.html" class="blog-card"
+           data-cats="food"
+           data-subs="flour"
+           data-sort="20260530"
+           data-publish="jovial-flour">
+          <div class="blog-card-img">
+            <img src="images/jovial-flour/main.webp" alt="Jovial Einkorn Flour"/>
+          </div>
+          <div class="blog-card-body">
+            <div class="blog-tag">New Product · Flour</div>
+            <div class="blog-card-title">Why We Chose Jovial Einkorn Flour — And the Truth About What's in Most Flour</div>
+            <div class="blog-card-meta">The Bonham Family &nbsp;·&nbsp; May 30, 2026</div>
+          </div>
+        </a>
+
         <a href="blog-post-vera-salt.html" class="blog-card" data-publish="vera-salt"
            data-cats="food"
            data-subs="salt"
@@ -417,6 +432,16 @@
     var publish = new Date("2026-05-27T09:00:00-04:00");
     if (new Date() < publish) {
       var cards = document.querySelectorAll('[data-publish="vera-salt"]');
+      cards.forEach(function(c) { c.style.display = 'none'; });
+    }
+  })();
+</script>
+
+<script>
+  (function() {
+    var publish = new Date("2026-05-30T09:00:00-04:00");
+    if (new Date() < publish) {
+      var cards = document.querySelectorAll('[data-publish="jovial-flour"]');
       cards.forEach(function(c) { c.style.display = 'none'; });
     }
   })();

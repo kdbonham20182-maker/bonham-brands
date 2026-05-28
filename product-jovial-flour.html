@@ -331,8 +331,8 @@
           <div class="pillar-desc">Non-GMO Project Verified and inherently non-GMO by nature — einkorn is an ancient grain that has never been hybridized or genetically modified in any form. It is one of the most genetically intact grains available anywhere.</div>
         </div>
         <div class="pillar-item">
-          <div class="pillar-name">Verified <span class="pillar-score">4/5</span></div>
-          <div class="pillar-desc">Verified through The Detox Project certification, Non-GMO Project verification, Regenerative Organic Certification, and independent Mamavation testing references. Strong third-party verification — scored 4 rather than 5 because batch-level published lab reports are not publicly available.</div>
+          <div class="pillar-name">Verified <span class="pillar-score mid">3/5</span></div>
+          <div class="pillar-desc">Verified through The Detox Project Glyphosate Residue Free certification, Non-GMO Project verification, and Regenerative Organic Certification. Scored 3 because Jovial does not publish batch-level lab results publicly, and the December 2025 Lead Safe Mama retest showed trace levels of lead and cadmium just above the detection threshold — reducing confidence despite strong certifications for pesticides and GMO.</div>
         </div>
         <div class="pillar-item">
           <div class="pillar-name">Purity <span class="pillar-score">4/5</span></div>
@@ -343,8 +343,8 @@
           <div class="pillar-desc">Flour inherently carries mold risk during storage if exposed to moisture or humidity. Jovial does not publicly disclose any mold testing or mitigation. This is not unique to Jovial — it applies to all flour — but we score it honestly. Store in a cool, dry, airtight container.</div>
         </div>
         <div class="pillar-item">
-          <div class="pillar-name">Heavy Metals <span class="pillar-score na">N/A</span></div>
-          <div class="pillar-desc">Heavy metal contamination is not a known concern for einkorn flour grown in Italian volcanic soils under strict EU standards. No testing is publicly disclosed, and this is not flagged as a concern by independent investigators for this product type.</div>
+          <div class="pillar-name">Heavy Metals <span class="pillar-score low">2/5</span></div>
+          <div class="pillar-desc">Lead Safe Mama independently tested Jovial Einkorn All-Purpose Flour in June 2024 and reported non-detect results for all four heavy metals — the first flour in their testing program to achieve that result. However a December 2025 retest showed trace levels of lead and cadmium just above the 5 ppb detection threshold. Jovial does not publish its own batch-level lab results. Scored 2 to reflect this honestly — trace metals detected in the most recent independent test, though still far cleaner than virtually every other flour tested.</div>
         </div>
         <div class="pillar-item">
           <div class="pillar-name">Microplastics <span class="pillar-score na">N/A</span></div>
@@ -384,7 +384,7 @@
       </div>
       <div class="contaminant-item">
         <div class="contaminant-name">Heavy Metals</div>
-        <div class="contaminant-status">Not a known concern for einkorn flour grown in Italian volcanic soils under EU organic standards. No public testing disclosed. Not flagged as a concern by independent investigators for this product type.</div>
+        <div class="contaminant-status">June 2024 Lead Safe Mama independent test — non-detect for lead, cadmium, mercury, and arsenic. First flour in their program to achieve this. December 2025 retest — trace lead and cadmium detected just above 5 ppb threshold. Still the cleanest wheat flour found by independent testing. Jovial does not publish its own batch-level results.</div>
       </div>
       <div class="contaminant-item">
         <div class="contaminant-name">Microplastics</div>
@@ -511,10 +511,10 @@
   new Chart(ctx, {
     type: 'radar',
     data: {
-      labels: ['Pesticides', 'Chemicals\n& Toxins', 'GMO', 'Verified', 'Purity', 'Mold'],
+      labels: ['Heavy\nMetals', 'Pesticides', 'Chemicals\n& Toxins', 'GMO', 'Verified', 'Purity', 'Mold'],
       datasets: [{
         label: 'Jovial Einkorn Flour',
-        data: [5, 5, 5, 4, 4, 1],
+        data: [2, 5, 5, 5, 3, 4, 1],
         backgroundColor: 'rgba(184,151,58,0.15)',
         borderColor: '#b8973a',
         borderWidth: 2,
