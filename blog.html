@@ -256,7 +256,22 @@
              data-sort = YYYYMMDD for sorting newest first
         ====================================================== -->
 
-                                                <a href="blog-post-baking-soda.html" class="blog-card"
+                                                        <a href="blog-post-walcoren-rennet.html" class="blog-card"
+           data-cats="food"
+           data-subs="rennet"
+           data-sort="20260602"
+           data-publish="walcoren-rennet">
+          <div class="blog-card-img">
+            <img src="images/walcoren-rennet/main.png" alt="Walcoren Natural Rennet Powder"/>
+          </div>
+          <div class="blog-card-body">
+            <div class="blog-tag">New Product · Rennet</div>
+            <div class="blog-card-title">Why We Chose Walcoren Natural Rennet Powder — And Why 90% of American Cheese Is Made With a GMO Ingredient Most Consumers Have Never Heard Of</div>
+            <div class="blog-card-meta">The Bonham Family &nbsp;·&nbsp; June 2, 2026</div>
+          </div>
+        </a>
+
+        <a href="blog-post-baking-soda.html" class="blog-card"
            data-cats="food"
            data-subs="baking-soda"
            data-sort="20260601"
@@ -542,6 +557,16 @@
     var publish = new Date("2026-06-01T09:00:00-04:00");
     if (new Date() < publish) {
       var cards = document.querySelectorAll('[data-publish="baking-soda"]');
+      cards.forEach(function(c) { c.style.display = 'none'; });
+    }
+  })();
+</script>
+
+<script>
+  (function() {
+    var publish = new Date("2026-06-02T09:00:00-04:00");
+    if (new Date() < publish) {
+      var cards = document.querySelectorAll('[data-publish="walcoren-rennet"]');
       cards.forEach(function(c) { c.style.display = 'none'; });
     }
   })();
