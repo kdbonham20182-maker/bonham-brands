@@ -256,7 +256,22 @@
              data-sort = YYYYMMDD for sorting newest first
         ====================================================== -->
 
-                                <a href="blog-post-doudlah-pinto-beans.html" class="blog-card"
+                                        <a href="blog-post-clear-creek-pinto-beans.html" class="blog-card"
+           data-cats="food"
+           data-subs="beans"
+           data-sort="20260531"
+           data-publish="clear-creek-beans">
+          <div class="blog-card-img">
+            <img src="images/pinto-beans/1.webp" alt="Clear Creek Pinto Beans"/>
+          </div>
+          <div class="blog-card-body">
+            <div class="blog-tag">New Product · Beans</div>
+            <div class="blog-card-title">Why We Chose Clear Creek Pinto Beans — Farm-to-Table Transparency From a 125-Year Family Farm</div>
+            <div class="blog-card-meta">The Bonham Family &nbsp;·&nbsp; May 31, 2026</div>
+          </div>
+        </a>
+
+        <a href="blog-post-doudlah-pinto-beans.html" class="blog-card"
            data-cats="food"
            data-subs="beans"
            data-sort="20260531"
@@ -492,6 +507,16 @@
     var publish = new Date("2026-05-31T09:00:00-04:00");
     if (new Date() < publish) {
       var cards = document.querySelectorAll('[data-publish="doudlah-pinto-beans"]');
+      cards.forEach(function(c) { c.style.display = 'none'; });
+    }
+  })();
+</script>
+
+<script>
+  (function() {
+    var publish = new Date("2026-05-31T12:00:00-04:00");
+    if (new Date() < publish) {
+      var cards = document.querySelectorAll('[data-publish="clear-creek-beans"]');
       cards.forEach(function(c) { c.style.display = 'none'; });
     }
   })();
