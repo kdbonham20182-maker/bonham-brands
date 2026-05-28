@@ -256,7 +256,37 @@
              data-sort = YYYYMMDD for sorting newest first
         ====================================================== -->
 
-                <a href="blog-post-jovial-flour.html" class="blog-card"
+                                <a href="blog-post-doudlah-pinto-beans.html" class="blog-card"
+           data-cats="food"
+           data-subs="beans"
+           data-sort="20260531"
+           data-publish="doudlah-pinto-beans">
+          <div class="blog-card-img">
+            <img src="images/doudlah-farms/main.jpg" alt="Doudlah Farms Pinto Beans"/>
+          </div>
+          <div class="blog-card-body">
+            <div class="blog-tag">New Product · Beans</div>
+            <div class="blog-card-title">Why We Chose Doudlah Farms Organic Pinto Beans — A Farm That Goes Further Than Organic</div>
+            <div class="blog-card-meta">The Bonham Family &nbsp;·&nbsp; May 31, 2026</div>
+          </div>
+        </a>
+
+        <a href="blog-post-lundberg-rice.html" class="blog-card"
+           data-cats="food"
+           data-subs="rice"
+           data-sort="20260530"
+           data-publish="lundberg-rice">
+          <div class="blog-card-img">
+            <img src="images/lundberg-rice/main.webp" alt="Lundberg Rice"/>
+          </div>
+          <div class="blog-card-body">
+            <div class="blog-tag">New Product · Rice</div>
+            <div class="blog-card-title">Why We Chose Lundberg Long Grain White Rice — And the Truth About Arsenic in Every Bag of Rice You've Ever Bought</div>
+            <div class="blog-card-meta">The Bonham Family &nbsp;·&nbsp; May 30, 2026</div>
+          </div>
+        </a>
+
+        <a href="blog-post-jovial-flour.html" class="blog-card"
            data-cats="food"
            data-subs="flour"
            data-sort="20260530"
@@ -429,7 +459,7 @@
 
 <script>
   (function() {
-    var publish = new Date("2026-05-27T09:00:00-04:00");
+    var publish = new Date("2026-05-28T09:00:00-04:00");
     if (new Date() < publish) {
       var cards = document.querySelectorAll('[data-publish="vera-salt"]');
       cards.forEach(function(c) { c.style.display = 'none'; });
@@ -442,6 +472,26 @@
     var publish = new Date("2026-05-30T09:00:00-04:00");
     if (new Date() < publish) {
       var cards = document.querySelectorAll('[data-publish="jovial-flour"]');
+      cards.forEach(function(c) { c.style.display = 'none'; });
+    }
+  })();
+</script>
+
+<script>
+  (function() {
+    var publish = new Date("2026-05-30T09:00:00-04:00");
+    if (new Date() < publish) {
+      var cards = document.querySelectorAll('[data-publish="lundberg-rice"]');
+      cards.forEach(function(c) { c.style.display = 'none'; });
+    }
+  })();
+</script>
+
+<script>
+  (function() {
+    var publish = new Date("2026-05-31T09:00:00-04:00");
+    if (new Date() < publish) {
+      var cards = document.querySelectorAll('[data-publish="doudlah-pinto-beans"]');
       cards.forEach(function(c) { c.style.display = 'none'; });
     }
   })();
