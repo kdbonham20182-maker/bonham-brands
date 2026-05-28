@@ -451,30 +451,6 @@
       updateGrid();
     });
   });
-
-  // Coming soon categories
-  const comingSoonCats = ['cleaning', 'bath', 'home-kitchen', 'outdoors'];
-
-  mainBtns.forEach(btn => {
-    if (comingSoonCats.includes(btn.dataset.cat)) {
-      btn.addEventListener('click', function(e) {
-        e.stopImmediatePropagation();
-        mainBtns.forEach(b => b.classList.remove('active'));
-        btn.classList.add('active');
-        subRows.forEach(row => row.classList.remove('visible'));
-        cards.forEach(card => card.classList.add('hidden'));
-        resultsCount.textContent = 'Coming soon';
-        const existing = document.getElementById('comingSoonMsg');
-        if (existing) existing.remove();
-        const msg = document.createElement('div');
-        msg.id = 'comingSoonMsg';
-        msg.style.cssText = 'grid-column:1/-1;text-align:center;padding:80px 0;';
-        msg.innerHTML = '<p style="font-family:Cormorant Garamond,serif;font-size:1.6rem;font-weight:400;color:var(--brown);margin-bottom:12px;">Coming Soon</p><p style="font-size:0.82rem;font-weight:300;color:var(--text-muted);line-height:1.8;margin-bottom:24px;">We are actively researching and vetting products in this category.<br>Subscribe below to be notified when new products are added.</p><a href="shop.html?cat=food" style="display:inline-block;padding:12px 32px;border:1px solid var(--gold);color:var(--gold-dark);font-family:Josefin Sans,sans-serif;font-size:0.72rem;font-weight:600;letter-spacing:0.15em;text-transform:uppercase;text-decoration:none;">Browse Food & Grocery →</a>';
-        document.getElementById('productGrid').appendChild(msg);
-      }, true);
-    }
-  });
-
   // Handle URL params on page load (?cat=food&sub=salt)
   const params = new URLSearchParams(window.location.search);
   const catParam = params.get('cat');
@@ -491,6 +467,20 @@
   } else {
     updateGrid();
   }
+</script>
+
+<script>
+  (function() {
+    var params = new URLSearchParams(window.location.search);
+    var cat = params.get('cat');
+    var comingSoon = ['cleaning', 'bath', 'home-kitchen', 'outdoors'];
+    if (cat && comingSoon.includes(cat)) {
+      var shopContent = document.querySelector('.shop-content');
+      if (shopContent) {
+        shopContent.innerHTML = '<div style="text-align:center;padding:120px 40px;"><h2 style="font-family:Cormorant Garamond,serif;font-size:2.4rem;font-weight:400;color:var(--brown);margin-bottom:20px;">Coming Soon</h2><a href="shop.html?cat=food" style="display:inline-block;padding:14px 40px;border:1px solid var(--gold);color:var(--gold-dark);font-family:Josefin Sans,sans-serif;font-size:0.75rem;font-weight:600;letter-spacing:0.2em;text-transform:uppercase;text-decoration:none;">Browse Food & Grocery →</a></div>';
+      }
+    }
+  })();
 </script>
 </body>
 </html>
